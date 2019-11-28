@@ -11,7 +11,7 @@
 # into 3 buckets of every 3rd character and xor the most frequent character in each
 # bucket with space to generate the key. Then it’s a simple matter to produce the
 # decrypted text.
-# 
+#
 # Solution runs in roughly 1.4 ms. Much faster and more concise than other
 # approaches I’ve seen.
 
