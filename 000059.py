@@ -6,7 +6,6 @@
 
 from itertools import permutations as p
 from functools import reduce
-# from random import shuffle
 
 Valid = [chr(x) for x in range(ord('A'), ord('Z')+1)] + [chr(x) for x in range(ord('a'), ord('z')+1)] +\
         [chr(x) for x in range(ord('0'), ord('9')+1)] +\
@@ -27,11 +26,9 @@ N = M[:Slice]
 
 Keys = [chr(n) for n in range(ord('a'), ord('z') + 1)]
 C = list(p(Keys, 3))
-# shuffle(C)
 
 for key in C:
     K = [ord(c) for c in key]
-    # D = [[M[x]^K[0], M[x+1]^K[1] if x+1<len(M) else None, (M[x+2]^K[2]) if x+2<len(M) else None] for x in range(0,len(M),3)]
     D = [[N[x]^K[0], N[x+1]^K[1] if x+1<len(N) else None, (N[x+2]^K[2]) if x+2<len(N) else None] for x in range(0,len(N),3)]
     # Convertir a vector
     MM = [chr(D[r][c]) for r in range(len(D)) for c in range(3)]
