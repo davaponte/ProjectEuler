@@ -21,10 +21,8 @@ problem.addConstraint(lambda A0, A3, A5, A7, A9: A0 == 10 or A3 == 10 or A5 == 1
 problem.addConstraint(AllDifferentConstraint())
 
 def GetDigitString(A):
-'''
-Esta función genera el digit string pedido, pero hay que comenzar desde el
-menor nodo exterior a construir el string, por eso la búsqueda inicial
-'''
+# Esta función genera el digit string pedido, pero hay que comenzar desde el
+# menor nodo exterior a construir el string, por eso la búsqueda inicial
     Order = [0, 1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8, 9, 8, 1]
     ExternalNodes = [A['A0'], A['A3'], A['A5'], A['A7'], A['A9']]
     idxk = [0, 3, 6, 9, 12]
