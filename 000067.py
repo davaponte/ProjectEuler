@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  000018.py
+#  000067.py
 #
 
 f = open('p067_triangle.txt')
