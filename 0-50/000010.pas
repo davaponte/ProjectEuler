@@ -11,7 +11,7 @@ begin
     if (n mod c = 0) and (n <> c) then begin
       Result := False;
       Exit;
-    end;  
+    end;
   end;
   Result := True;
 end;
