@@ -7,7 +7,7 @@
 MaxC = 1001
 MaxR = 1001
 
-Matrix = [[0 for c in range(MaxC)] for r in range(MaxR)]
+Matrix = [[0] * MaxC for r in range(MaxR)]
 
 co, ro = MaxC // 2, MaxR // 2
 c, r = co, ro
@@ -21,22 +21,19 @@ while (k <= Maxk):
     c += do[1]
     k += 1
     if (r == c) or ((MaxR - r - 1 == c) and (c < co)) or ((MaxR - r == c) and (c > co)):
-        if (do == Dir[0]):
-            do = Dir[1]
-        elif (do == Dir[1]):
-            do = Dir[2]
-        elif (do == Dir[2]):
-            do = Dir[3]
-        else: # elif (do == Dir[3]):
-            do = Dir[0]
 
-# ~ for r in range(MaxR):
-    # ~ for c in range(MaxC):
-        # ~ print('{0:^3}'.format(Matrix[r][c]), end=' ' )
-    # ~ print()
+        idx = Dir.index(do)
+        do = Dir[idx + 1] if (idx < len(Dir) - 1) else Dir[0]
+        # if (do == Dir[0]):
+        #     do = Dir[1]
+        # elif (do == Dir[1]):
+        #     do = Dir[2]
+        # elif (do == Dir[2]):
+        #     do = Dir[3]
+        # else: # elif (do == Dir[3]):
+        #     do = Dir[0]
 
-Suma = -Matrix[ro][co]
-for r in range(MaxR):
-    Suma += Matrix[r][r] + Matrix[MaxR - r - 1][r]
+Suma = sum(Matrix[r][r] + Matrix[MaxR - r - 1][r] for r in range(MaxR))
+Suma -= Matrix[ro][co] # Porque el central se suma dos veces, hay que quitar uno
 
 print('ANSWER: ', Suma)
