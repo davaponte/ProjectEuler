@@ -44,5 +44,5 @@ for a in range(2,101):
         l.add(x)
 L = len(l)
 end = time.time()
-print('USING ONLY SETS AND NO POWERS ANSWER: ', L)
 print(end - start)
+print('USING ONLY SETS AND NO POWERS ANSWER: ', L)
