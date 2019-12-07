@@ -31,21 +31,12 @@ def GetHandValue(Hand):
     Seq = []
     for card in Hand:
         Seq.append(InvCards[card[0]])
-        # if card[0] in ['2', '3', '4', '5', '6', '7', '8', '9']:
-        #     Seq.append(int(card[0]))
-        # elif card[0] == 'T':
-        #     Seq.append(10)
-        # elif card[0] == 'J':
-        #     Seq.append(11)
-        # elif card[0] == 'Q':
-        #     Seq.append(12)
-        # elif card[0] == 'K':
-        #     Seq.append(13)
-        # elif card[0] == 'A':
-        #     Seq.append(14)
     Seq.sort()
-    if Seq[4] == 14 and Seq[0] == 2: # Caso especial para el AS
-        Seq = [1] + Seq[:4] # Esto mueve el AS al comienzo pero solo si había un dos
+
+    # Bajo ciertas reglas es que se permite. En este problema pareciera que no
+    # if Seq[4] == 14 and Seq[0] == 2: # Caso especial para el AS
+    #     Seq = [1] + Seq[:4] # Esto mueve el AS al comienzo pero solo si había un dos
+
     Values = [Hand[n][0] for n in range(len(Hand))]
     VGroup = Counter(Values)
     GroupV = {v: k for k, v in VGroup.items()} # para búsqueda inversa
@@ -59,48 +50,67 @@ def GetHandValue(Hand):
     for card in Hand:
         Valid = Valid and (card[0] in ['T', 'J', 'Q', 'K', 'A']) and (card[1] == Suit)
     if Valid:
-        return 100, Suit, 'Royal Flush', Hand
+        return 100, Suit, 'Royal Flush', Hand, Cards[Seq[4]]
 
     # Check for Straight Flush: All cards are consecutive values of same suit.
     Suit = Hand[0][1]
     Valid = (card[0] in ['T', 'J', 'Q', 'K', 'A']) and (card[1] == Suit)
     if Valid: # Solo entra si todas tienen el mismo suit
         if all([Seq[d] + 1 == Seq[d + 1] for d in range(len(Seq) - 1)]):
-            return 90, Suit, 'Straight Flush', Hand
+            return 90, Suit, 'Straight Flush', Hand, Cards[Seq[4]]
 
     # Check for Four of a Kind: Four cards of the same value.
     if GroupV.get(4):
-        return 80, GroupV[4], 'Four of a Kind', Hand
+        return 80, GroupV[4], 'Four of a Kind', Hand, Cards[Seq[4]]
 
     # Check for Full House: Three of a kind and a pair.
     if GroupV.get(3) and GroupV.get(2):
-        return 70, GroupV[3], 'Full House', Hand
+        return 70, GroupV[3], 'Full House', Hand, Cards[Seq[4]]
 
     # Check for Flush: All cards of the same suit.
     if GroupS.get(5):
-        return 60, GroupS[5], 'Flush', Hand
+        return 60, GroupS[5], 'Flush', Hand, Cards[Seq[4]]
 
     # Check for Straight: All cards are consecutive values.
     if all([Seq[d] + 1 == Seq[d + 1] for d in range(len(Seq) - 1)]):
-        return 50, 'Straight', Hand
+        return 50, Cards[Seq[4]], 'Straight', Hand, Cards[Seq[4]]
 
     # Check for Three of a Kind: Three cards of the same value.
     if GroupV.get(3):
-        return 40, GroupV[3], 'Three of a Kind', Hand
+        return 40, GroupV[3], 'Three of a Kind', Hand, Cards[Seq[4]]
 
     # Check for Two Pairs: Two different pairs.
     if len(VGroup) == 3: # El diccionario inverso no sirve en este caso
-        return 30, 'Two Pairs', Hand
+        return 30, '??', 'Two Pairs', Hand, Cards[Seq[4]]
 
     # Check for One Pair: Two cards of the same value.
     if GroupV.get(2):
-        return 20, GroupV[2], 'One Pair', Hand
+        return 20, GroupV[2], 'One Pair', Hand, Cards[Seq[4]]
 
     # Check for High Card: Highest value card.
-    return 10, Cards[Seq[4]], 'High Card', Hand # En este caso se devuelve el mayor valor posible
+    return 10, Cards[Seq[4]], 'High Card', Hand, Cards[Seq[4]] # En este caso se devuelve el mayor valor posible
 
+def CompareHands(HandA, HandB):
+    A = GetHandValue(HandA)
+    B = GetHandValue(HandB)
+    if (A[0] > B[0]):
+        print('Player 1 wins', HandA, 'is better than', HandB)
+    elif (A[0] < B[0]):
+        print('Player 2 wins', HandA, 'is not better than', HandB)
+    else:
+        # TODO: Comparar bien
+        print('Both players have:', A[2])
+        if (InvCards[A[4]] > InvCards[B[4]]):
+            print('Player 1 wins', A[4], 'is higher than', B[4])
+        else:
+            print('Player 2 wins', A[4], 'is not higher than',B[4])
 
 print(GetHandValue(['QH', 'AH', 'JH', 'QH', 'TH']))
+print(GetHandValue(['2H', '3H', '4H', 'AH', '5D']))
+
+CompareHands(['5H', '5C', '6S', '7S', 'KD'], ['2C', '3S', '8S', '8D', 'TD'])
+
+
 print(GetHandValue(['5H', '5C', '6S', '7S', 'KD']))
 print(GetHandValue(['2C', '3S', '8S', '8D', 'TD']))
 print(GetHandValue(['5D', '8C', '9S', 'JS', 'AC']))
