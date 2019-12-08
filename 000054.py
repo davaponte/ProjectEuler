@@ -131,3 +131,9 @@ for line in lines:
 f.close()
 
 print('ANSWER: ', Wins)
+
+# El código admite muchas mejoras. Tuve que estudiar
+# mucho sobre Poker (que no me agrada demasiado) para
+# medio entender cómo sopesar las manos.
+# Al final implementé un sistema propio de pesos que funciona. 
+# Sospecho que ante algunos casos borde va a fallar.
