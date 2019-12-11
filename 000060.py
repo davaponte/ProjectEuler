@@ -21,7 +21,7 @@ while True:
     if n in BigPrimes:
         Primes.append(n)
     n += 1
-    if (n > 20000):
+    if (n > 2000):
         break
 print('Primes list created.', 'Num. items: ', len(Primes), 'Max prime: ', Primes[len(Primes) - 1])
 
