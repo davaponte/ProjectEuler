@@ -4,7 +4,10 @@
 #  000092.py
 #
 
+Seq = [89]
+
 def Check(n):
+    N = n
     Prev = [n]
     while True:
         New = sum(int(c)**2 for c in str(n))
@@ -17,11 +20,15 @@ def Check(n):
         n = New
         Prev.append(n)
 
+for n in range(1, 567 + 1): # 9999999 -> 567
+    C = Check(n)
+    if C == 89:
+        Seq.append(C)
+
+print(Seq)
 Acum = 0
-for n in range(10000000 - 1, 0, -1):
-    if (n % 100000 == 0):
-        print(n, '...')
-    if Check(n) == 89:
+for n in range(1, 10000000):
+    if (n in Seq) or (sum(int(c)**2 for c in str(n)) in Seq):
         Acum += 1
 
 print('ANSWER: ', Acum)
