@@ -5,6 +5,7 @@
 #
 
 from itertools import combinations as c, permutations as p
+from math import inf
 
 def IsPrime(n):
     for x in range(2, int(n**.5)+1):
@@ -36,6 +37,15 @@ def AddPrimes(a, b):
         a *= 10
     return a + b
 
+def Hash(l):
+    N = l[len(l) - 1]
+    for c in range(len(l) - 2, -1, -1):
+        a = l[c] * 10
+        for _ in range(1, Len(N) + 1):
+            a *= 10
+        N += a
+    return N
+
 def IsValid(a, b):
     if Len(a) + Len(b) > 5:
         return IsPrime(AddPrimes(a, b)) and IsPrime(AddPrimes(b, a))
@@ -44,37 +54,97 @@ def IsValid(a, b):
 
 Pairs = {}
 Triplets = {}
-Quartets = {}
-Fiftets = {}
 for a in Primes:
     for b in Primes:
         if a >= b:
             continue
         if IsValid(a, b):
-            # Pairs[str(a) + ' '  + str(b)] = [a, b]
-            for c in Primes:
-                if (a >= c) or (b >= c):
-                    continue
-                if IsValid(a, c) and IsValid(b, c):
-                    # Triplets[str(a) + ' '  + str(b) + ' ' + str(c)] = [a, b, c]
-                    for d in Primes:
-                        if (a >= d) or (b >= d) or (c >= d):
-                            continue
-                        if IsValid(a, d) and IsValid(b, d) and IsValid(c, d):
-                            # Quartets[str(a) + ' '  + str(b) + ' ' + str(c) + ' ' + str(d)] = [a, b, c, d]
-                            for e in Primes:
-                                if (a >= e) or (b >= e) or (c >= e) or (d >= e):
-                                    continue
-                                if IsValid(a, e) and IsValid(b, e) and IsValid(c, e) and IsValid(d, e):
-                                    Fiftets[str(a) + ' '  + str(b) + ' ' + str(c) + ' ' + str(d) + ' ' + str(e)] = [a, b, c, d, e]
-                                    print('Items: ', [a, b, c, d, e], 'Sum: ', sum([a, b, c, d, e]))
+            Pairs[(a, b)] = [a, b]
+            # for c in Primes:
+            #     if (a >= c) or (b >= c):
+            #         continue
+            #     if IsValid(a, c) and IsValid(b, c):
+            #         Triplets[(a, b, c)] = [a, b, c]
 
-
-# print('Pairs dict created.', 'Num. items: ', len(Pairs))
+print('Pairs dict created.', 'Num. items: ', len(Pairs))
 # print('Triplets dict created.', 'Num. items: ', len(Triplets))
-# print('Quartets dict created.', 'Num. items: ', len(Quartets))
-print('Fiftets dict created.', 'Num. items: ', len(Fiftets))
-print(Fiftets)
+
+Groups = {}
+for k, v in Pairs.items():
+    if Groups.get(v[0]):
+        Groups[v[0]].append(v[1])
+    else:
+        Groups[v[0]] = [v[1]]
+    if Groups.get(v[1]):
+        Groups[v[1]].append(v[0])
+    else:
+        Groups[v[1]] = [v[0]]
+
+print(Groups)
+print('l3 = ', Groups[3])
+print('l7 = ', Groups[7])
+print('l109 = ', Groups[109])
+print('l673 = ', Groups[673])
+print('l229 = ', Groups[229])
+
+# Min = inf
+# for x in Pairs:
+#     a = Pairs[x][0]
+#     b = Pairs[x][1]
+#     if (a + b > Min):
+#         break
+#     for y in Pairs:
+#         c = Pairs[y][0]
+#         d = Pairs[y][1]
+#         if (a in [c, d]) or (b in [c, d]):
+#             continue
+#         lk = [a, b, c, d]
+#         lk.sort()
+#         key = tuple(lk) # Hash(lk)
+#         if Fiftets.get(key):
+#             continue
+#         if IsValid(a, c) and IsValid(a, d) and IsValid(b, c) and IsValid(b, d):
+#             Suma = sum([a, b, c, d])
+#             if Suma < Min:
+#                 Min = Suma
+#                 Fiftets[(a, b, c, d)] = [a, b, c, d]
+#                 print('Items: ', [a, b, c, d], 'Sum: ', Suma)
+#
+# Candidatos = [[l, sum(Fiftets[l])] for l in Fiftets]
+# if Candidatos:
+#     print('ANSWER: ', min(Candidatos, key=lambda x:x[1]))
+# else:
+#     print('Nothing found.')
+#
+# import sys
+# sys.exit()
+
+Fiftets = {}
+Min = inf
+for x in Pairs:
+    a = Pairs[x][0]
+    b = Pairs[x][1]
+    if (a + b > Min):
+        break
+    for y in Triplets:
+        c = Triplets[y][0]
+        d = Triplets[y][1]
+        e = Triplets[y][2]
+        if (a in [c, d, e]) or (b in [c, d, e]):
+            continue
+        if (a + b + c > Min) or (a + b + d > Min) or (a + b + e > Min) or (c + d + e > Min):
+            continue
+        lk = [a, b, c, d, e]
+        lk.sort()
+        key = tuple(lk)
+        if Fiftets.get(key):
+            continue
+        if IsValid(a, c) and IsValid(a, d) and IsValid(a, e) and IsValid(b, c) and IsValid(b, d) and IsValid(b, e):
+            Suma = sum([a, b, c, d, e])
+            if Suma < Min:
+                Min = Suma
+            Fiftets[(a, b, c, d, e)] = [a, b, c, d, e]
+            print('Items: ', [a, b, c, d, e], 'Sum: ', Suma)
 
 Candidatos = [[l, sum(Fiftets[l])] for l in Fiftets]
 if Candidatos:
