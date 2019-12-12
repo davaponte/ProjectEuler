@@ -36,7 +36,7 @@ TenThousandsPrimes = [n for n in range(100000) if IsPrime(n) and (n < 10000)]
 
 problem = Problem()
 
-for n in range(5):
+for n in range(2):
     problem.addVariable('P' + str(n + 1), TenThousandsPrimes)
 
 def Valids(P1, P2, P3, P4, P5):
@@ -45,9 +45,8 @@ def Valids(P1, P2, P3, P4, P5):
             IsValid(P3, P4) and IsValid(P3, P5) and \
             IsValid(P4, P5)
 
-problem.addConstraint(lambda P1, P2, P3, P4, P5: Valids(P1, P2, P3, P4, P5), ('P1', 'P2', 'P3', 'P4', 'P5'))
+problem.addConstraint(lambda P1, P2: IsValid(P1, P2), ('P1', 'P2'))
 problem.addConstraint(AllDifferentConstraint())
 
-Sol = problem.getSolutions()
-
+Sol = problem.getSolution()
 print(Sol)
