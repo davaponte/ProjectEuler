@@ -4,17 +4,20 @@
 {$APPTYPE CONSOLE}
 
 uses
-  SysUtils;
+  SysUtils, Math;
 
 type
   integer = Int64;
 const
   BigLimit = 1000000;
-  Limit = 20000;
+  Limit = 10000;
 var
   c, x: integer;
   BigPrimes: bitpacked array[2..BigLimit] of boolean;
   Primes: array of integer;
+
+  // HowMany := 17218919;
+  // HowMuch := 1999317839;
 
 function IsPrime(n: integer): boolean;
 var
@@ -227,14 +230,5 @@ end;
 begin
   CreateBigPrimes;
   FindValidPrimes;
-  // for c := 0 to High(BigPrimes) do
-  //   Write('"', BigPrimes[c], '" - ');
-  // WriteLn;
-
-  // FindPairs;
-  // for c := 0 to High(Pairs) do
-  //   Write('"', Pairs[c].a, ', ', Pairs[c].b, '" - ');
-  // WriteLn;
-
   WriteLn(Loop);
 end.
