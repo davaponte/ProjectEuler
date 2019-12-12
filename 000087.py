@@ -4,11 +4,23 @@
 #  000087.py
 #
 
-def IsPrime(n):
+def _IsPrime(n):
     for x in range(2, int(n**.5)+1):
         if n % x == 0:
             return False
     return n>1
+
+def IsPrime(n):
+    if n <= 3:
+        return n > 1
+    elif (n % 2 == 0) or (n % 3 == 0):
+        return False
+    i = 5
+    while (i * i <= n):
+        if (n % i == 0) or (n % (i + 2) == 0):
+            return False
+        i += 6
+    return True
 
 Primes = [n for n in range(10000) if IsPrime(n) and (n < 7070)]
 # El valor tope fue obtenido por iteración a mano, por bisección y varias corridas
