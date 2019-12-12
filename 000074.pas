@@ -65,7 +65,7 @@ begin
   // WriteLn(Iterate(78));
   // WriteLn(Iterate(540));
 
-  for n := 1 to 999999 do
+  for n := 70 to 999999 do
     if Iterate(n) then Inc(s);
 
   WriteLn('ANSWER: ', s);
