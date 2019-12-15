@@ -1,0 +1,932 @@
+object CalcForm: TCalcForm
+  Left = 857
+  Height = 569
+  Top = 127
+  Width = 434
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  BorderWidth = 5
+  Caption = 'WaCkO - The WTF Calculator'
+  ClientHeight = 569
+  ClientWidth = 434
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  ShowHint = True
+  LCLVersion = '1.5'
+  object OrgEd: TEdit
+    Left = 157
+    Height = 23
+    Top = 448
+    Width = 213
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    Text = 'OrgEd'
+  end
+  object RealEd: TEdit
+    Left = 157
+    Height = 23
+    Top = 472
+    Width = 213
+    TabOrder = 1
+    Text = 'RealEd'
+  end
+  object Display: TEdit
+    Left = 157
+    Height = 25
+    Top = 416
+    Width = 213
+    Color = 4605510
+    Font.Color = 4259584
+    Font.Height = -15
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Style = [fsBold]
+    ParentFont = False
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabStop = False
+    TabOrder = 2
+    Text = 'Display'
+  end
+  object TestBtn: TButton
+    Left = 24
+    Height = 25
+    Top = 424
+    Width = 75
+    Caption = 'TestBtn'
+    OnClick = TestBtnClick
+    TabOrder = 3
+  end
+  object CleanCB: TCheckBox
+    Left = 295
+    Height = 19
+    Top = 536
+    Width = 65
+    Caption = 'CleanCB'
+    Checked = True
+    State = cbChecked
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 456
+    Width = 75
+    Caption = 'Copy'
+    OnClick = Button1Click
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 24
+    Height = 25
+    Top = 488
+    Width = 75
+    Caption = 'Cut'
+    OnClick = Button2Click
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 24
+    Height = 25
+    Top = 520
+    Width = 75
+    Caption = 'Paste'
+    OnClick = Button3Click
+    TabOrder = 7
+  end
+  object DisplayPanel: TPanel
+    Left = 8
+    Height = 50
+    Top = 16
+    Width = 392
+    Caption = 'DisplayPanel'
+    Color = 6974058
+    ParentColor = False
+    TabOrder = 8
+  end
+  object RadixPnl: TRadioGroup
+    Left = 8
+    Height = 51
+    Top = 80
+    Width = 392
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 5
+    ClientHeight = 31
+    ClientWidth = 388
+    Columns = 5
+    ItemIndex = 0
+    Items.Strings = (
+      'Decimal'
+      'Hexadecimal'
+      'Binary'
+      'Octal'
+      'Roman'
+    )
+    OnSelectionChanged = RadixPnlSelectionChanged
+    TabOrder = 9
+  end
+  object MemPnl: TPanel
+    Left = 64
+    Height = 38
+    Top = 144
+    Width = 169
+    ClientHeight = 38
+    ClientWidth = 169
+    TabOrder = 10
+    object MemClrBtn: TSpeedButton
+      Left = 13
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acMemClear
+      Anchors = [akTop]
+    end
+    object MemSetBtn: TSpeedButton
+      AnchorSideLeft.Control = MemClrBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 43
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acMemSet
+      Anchors = []
+    end
+    object MemReadBtn: TSpeedButton
+      AnchorSideLeft.Control = MemSetBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 75
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acMemRead
+      Anchors = [akTop]
+    end
+    object MemAddBtn: TSpeedButton
+      AnchorSideLeft.Control = MemReadBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 107
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acMemAdd
+      Anchors = [akTop]
+    end
+    object MemSubBtn: TSpeedButton
+      AnchorSideLeft.Control = MemAddBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 139
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acMemSub
+      Anchors = [akTop]
+    end
+  end
+  object EditPnl: TPanel
+    Left = 240
+    Height = 38
+    Top = 144
+    Width = 185
+    ClientHeight = 38
+    ClientWidth = 185
+    TabOrder = 11
+    object EditClearAllBtn: TSpeedButton
+      AnchorSideLeft.Control = EditBsBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 39
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acEditClearAll
+      Anchors = [akTop]
+    end
+    object EditCopyBtn: TSpeedButton
+      AnchorSideLeft.Control = EditClearAllBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 96
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acEditCopy
+      Anchors = [akTop]
+    end
+    object EditCutBtn: TSpeedButton
+      AnchorSideLeft.Control = EditCopyBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 129
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acEditCut
+      Anchors = [akTop]
+    end
+    object EditPasteBtn: TSpeedButton
+      AnchorSideLeft.Control = EditCutBtn
+      AnchorSideLeft.Side = asrBottom
+      Left = 154
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acEditPaste
+      Anchors = [akTop]
+    end
+    object EditBsBtn: TSpeedButton
+      Left = 6
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acBackSpace
+      Anchors = [akTop]
+    end
+    object EditClearBtn: TSpeedButton
+      Left = 69
+      Height = 24
+      Top = 5
+      Width = 24
+      Action = acEditClear
+    end
+  end
+  object PGMToggle: TToggleBox
+    Left = 8
+    Height = 38
+    Hint = 'Parental Guidance Mode'
+    Top = 144
+    Width = 43
+    Caption = 'PGM'
+    TabOrder = 12
+  end
+  object DebugNCalcCB: TCheckBox
+    Left = 296
+    Height = 19
+    Top = 520
+    Width = 102
+    Caption = 'DebugNCalcCB'
+    OnChange = DebugNCalcCBChange
+    TabOrder = 13
+  end
+  object NumPnl: TPanel
+    Left = 237
+    Height = 98
+    Top = 208
+    Width = 88
+    ClientHeight = 98
+    ClientWidth = 88
+    TabOrder = 14
+    object Num7: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 0
+      Width = 23
+      Action = acNum7
+    end
+    object Num8: TSpeedButton
+      Left = 27
+      Height = 22
+      Top = 0
+      Width = 23
+      Action = acNum8
+    end
+    object Num9: TSpeedButton
+      Left = 54
+      Height = 22
+      Top = 0
+      Width = 23
+      Action = acNum9
+    end
+    object Num4: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 24
+      Width = 23
+      Action = acNum4
+    end
+    object Num5: TSpeedButton
+      Left = 27
+      Height = 22
+      Top = 24
+      Width = 23
+      Action = acNum5
+    end
+    object Num6: TSpeedButton
+      Left = 54
+      Height = 22
+      Top = 24
+      Width = 23
+      Action = acNum6
+    end
+    object Num1: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 49
+      Width = 23
+      Action = acNum1
+    end
+    object Num2: TSpeedButton
+      Left = 27
+      Height = 22
+      Top = 49
+      Width = 23
+      Action = acNum2
+    end
+    object Num3: TSpeedButton
+      Left = 54
+      Height = 22
+      Top = 49
+      Width = 23
+      Action = acNum3
+    end
+    object Num0: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 74
+      Width = 77
+      Action = acNum0
+    end
+  end
+  object BasicOpPnl: TPanel
+    Left = 318
+    Height = 106
+    Top = 208
+    Width = 25
+    ClientHeight = 106
+    ClientWidth = 25
+    TabOrder = 15
+    object opAdd: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 0
+      Width = 23
+      Action = acAdd
+    end
+    object opMin: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 24
+      Width = 23
+      Action = acSub
+    end
+    object opMul: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 49
+      Width = 23
+      Action = acMul
+    end
+    object opDiv: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 74
+      Width = 23
+      Action = acDiv
+    end
+  end
+  object AlphaPnl: TPanel
+    Left = 182
+    Height = 146
+    Top = 208
+    Width = 49
+    ClientHeight = 146
+    ClientWidth = 49
+    TabOrder = 16
+    object HexA: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 0
+      Width = 23
+      Action = acHexA
+    end
+    object HexB: TSpeedButton
+      Left = 24
+      Height = 22
+      Top = 0
+      Width = 23
+      Action = acHexB
+    end
+    object HexC: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 24
+      Width = 23
+      Action = acHexC
+    end
+    object HexD: TSpeedButton
+      Left = 24
+      Height = 22
+      Top = 24
+      Width = 23
+      Action = acHexD
+    end
+    object HexE: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 49
+      Width = 23
+      Action = acHexE
+    end
+    object HexF: TSpeedButton
+      Left = 24
+      Height = 22
+      Top = 49
+      Width = 23
+      Action = acHexF
+    end
+    object RomI: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 74
+      Width = 23
+      Action = acRomI
+    end
+    object RomV: TSpeedButton
+      Left = 24
+      Height = 22
+      Top = 74
+      Width = 23
+      Action = acRomV
+    end
+    object RomX: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 98
+      Width = 23
+      Action = acRomX
+    end
+    object RomL: TSpeedButton
+      Left = 24
+      Height = 22
+      Top = 98
+      Width = 23
+      Action = acRomL
+    end
+    object RomM: TSpeedButton
+      Left = 0
+      Height = 22
+      Top = 122
+      Width = 47
+      Action = acRomM
+    end
+  end
+  object EqualsPnl: TPanel
+    Left = 237
+    Height = 46
+    Top = 308
+    Width = 106
+    ClientHeight = 46
+    ClientWidth = 106
+    TabOrder = 17
+    object opEquals: TSpeedButton
+      Left = -10
+      Height = 46
+      Top = -2
+      Width = 114
+      Action = acEquals
+    end
+  end
+  object MemActions: TActionList
+    left = 129
+    top = 521
+    object acMemClear: TAction
+      Caption = 'MC'
+      Hint = 'Clear memory'
+      OnExecute = acMemClearExecute
+    end
+    object acMemSet: TAction
+      Caption = 'MS'
+      Hint = 'Put ito memory'
+      OnExecute = acMemSetExecute
+    end
+    object acMemRead: TAction
+      Caption = 'MR'
+      Hint = 'Read from memory'
+      OnExecute = acMemReadExecute
+    end
+    object acMemAdd: TAction
+      Caption = 'M+'
+      Hint = 'Add to memory'
+      OnExecute = acMemAddExecute
+    end
+    object acMemSub: TAction
+      Caption = 'M-'
+      Hint = 'Subtract from memory'
+      OnExecute = acMemSubExecute
+    end
+  end
+  object EditActions: TActionList
+    Images = EdImgList
+    left = 185
+    top = 521
+    object acEditClearAll: TAction
+      Caption = 'CE'
+      Hint = 'Clear All'
+      OnExecute = acEditClearAllExecute
+      ShortCut = 27
+    end
+    object acEditClear: TAction
+      Caption = 'C'
+      Hint = 'Clear'
+      OnExecute = acEditClearExecute
+      ShortCut = 46
+    end
+    object acEditCopy: TAction
+      Hint = 'Copy to cliboard'
+      ImageIndex = 1
+      OnExecute = acEditCopyExecute
+      ShortCut = 16451
+    end
+    object acEditCut: TAction
+      Hint = 'Cut to clipboard'
+      ImageIndex = 2
+      OnExecute = acEditCutExecute
+      ShortCut = 16472
+    end
+    object acEditPaste: TAction
+      Hint = 'Paste from clipboard'
+      ImageIndex = 3
+      OnExecute = acEditPasteExecute
+      ShortCut = 16470
+    end
+    object acPGM: TAction
+      Caption = 'PGM'
+      Hint = 'Parental Guidance Mode'
+      OnExecute = acPGMExecute
+      ShortCut = 16464
+    end
+  end
+  object EdImgList: TImageList
+    left = 126
+    top = 480
+    Bitmap = {
+      4C69040000001000000010000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0068C7740668C7
+      74BBFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0068C774DB65C3
+      71F7FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0068C774D180CD8BFF7CC9
+      87FF5DB868FF58B162FF53A95CFF4DA156FF47994FFF419149FF3B8842FF3580
+      3BFF2F7835FF2A702FFFFFFFFF00FFFFFF0068C774C97FCC8AFFA2D8ABFF9ED6
+      A7FF9AD4A3FF96D29FFF93CF9AFF8ECC95FF89CA90FF85C78BFF81C587FF7DC2
+      82FF78C07EFF256929FFFFFFFF00FFFFFF0065C371C47BC886FF9CD5A5FF98D3
+      A1FF94D09DFF90CE98FF8BCB93FF87C98EFF82C689FF7EC384FF7AC180FF76BE
+      7CFF72BD78FF216324FFFFFFFF00FFFFFF00FFFFFF005DB868CF71BE7BFF7AC1
+      83FF5BAA64FF47994FFF419149FF3B8842FF35803BFF2F7835FF2A702FFF2569
+      29FF216324FF1D5E20FFFFFFFF00FFFFFF00FFFFFF00FFFFFF0053A95CD94DA1
+      56F747994F38FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF004DA156064799
+      4FB8FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF008B908D57898E8C7F898E8C7F898E8C7F898E
+      8C7F898E8C7F898E8C7F898E8C7F898E8C7F898E8C7F898E8C7F898E8C7F898E
+      8C7F898E8C7F8B908D5700000000858A887EFFFFFF7FFFFFFF7FFFFFFF7FFFFF
+      FF7FFFFFFF7FFFFFFF7FFFFFFF7FFFFFFF7FFFFFFF7FFFFFFF7FFFFFFF7FFFFF
+      FF7FFFFFFF7F8D91907E00000000868C8A7EFFFFFF7FEFF0F07FEFF0F07FEFF0
+      F07FEFF0F07FEFF0F07FEFF0F07FEFF0F07FEFF0F07FEFF0F07FEFF0F07FEFF0
+      F07FFEFEFE7F8E92917E00000000868C8A7EFFFFFF7FEFF0F07FEFF0F07FEFF0
+      F07FEFF0F07FEFF0F07FEEEFEF80E8E9E983E8E9E983E8E9E983E8E9E983E7E8
+      E883F6F6F6838D91908200000000868C8A7EFFFFFF7FEFF0F07FCACACA7FCACA
+      CA7FCACACA7FC9C9C980959997DA898E8CFE898E8CFD898E8CFD898E8CFD8A8E
+      8CFD8A8F8DFD898E8CFD898E8CFC868C8A7EFFFFFF7FEFF0F07FEFF0F07FEFF0
+      F07FEFF0F07FE8E9E983868B89FEFFFFFFFFFEFEFEFFFEFEFEFFFEFEFEFFFEFE
+      FEFFFEFEFEFFFEFEFEFFFEFEFEFF868C8A7EFFFFFF7FEFF0F07FCACACA7FCACA
+      CA7FCACACA7FC5C6C583868B89FDFFFFFFFFEFF0F0FFEFF0F0FFEFF0F0FFEFF0
+      F0FFEFF0F0FFEFF0F0FFEFF0F0FF868C8A7EFFFFFF7FEFF0F07FEFF0F07FEFF0
+      F07FEFF0F07FE7E8E883878C8AFDFFFFFFFFEFF0F0FFEFF0F0FFEFF0F0FFEFF0
+      F0FFEFF0F0FFEFF0F0FFEFF0F0FF868C8A7EFFFFFF7FEFF0F07FCACACA7FC9CA
+      CA7FC9CACA7FC3C5C583868B89FDFFFFFFFFEFF0F0FFC6C7C7FFC6C7C7FFC6C7
+      C7FFC6C7C7FFC6C7C7FFC6C7C7FF868C8A7EFFFFFF7FEFF0F07FEEEFEF7FEEEE
+      EE7FEDEEEE7FE5E6E683878C8AFDFFFFFFFFEFF0F0FFEEEFEFFFEEEFEFFFEEEF
+      EFFFEEEFEFFFEEEFEFFFEEEFEFFF868C8A7EFFFFFF7FEEEFEF7FC8C9C97FC8C8
+      C87FC7C8C87FC2C3C383868B89FDFFFFFFFFEFF0F0FFC6C7C7FFC6C7C7FFC6C7
+      C7FFC6C7C7FFC6C7C7FFC5C6C6FF868B8900FFFFFF7FEDEEEE7FECEDED7FECEC
+      EC7FEBECEC7FE4E5E483878C8AFDFFFFFFFFEFF0F0FFEFF0F0FFEFF0F0FFEFF0
+      F0FFEEEFEFFFEEEFEFFFEDEEEEFF868B8900FFFFFF7FECEDED7FC7C7C77FC6C7
+      C77FC5C6C67FC1C1C183868B89FDFFFFFFFFEFF0F0FFC7C8C8FFC6C7C7FFC6C7
+      C7FFC5C6C6FFC5C6C6FFC5C5C5FF868B8900FDFDFD7FEBECEC7FEBEBEB7FEAEB
+      EB7FEAEAEA7FE2E3E383878C8AFDFFFFFFFFEFF0F0FFEEEFEFFFEEEEEEFFEDEE
+      EEFFECEDEDFFECEDEDFFEBECECFF868B8900FAFAFA7FEAEBEB7FEAEAEA7FE9EA
+      EA7FE9E9E97FE1E2E283878C8AFDFFFFFFFFEEEFEFFFC5C5C5FFC5C5C5FFC4C5
+      C5FFC4C4C4FFC3C4C4FFC3C3C3FF868B8900F7F7F77FEAEAEA7FE9E9E97FE8E9
+      E97FE8E8E87FE2E3E383878C8AFDFFFFFFFFEDEEEEFFEBECECFFEBEBEBFFEAEB
+      EBFFEAEAEAFFE9EAEAFFECECECFF000000000000000000000000000000008C91
+      8FC78A8F8DFF858A883C00000000000000000000000000000000000000000000
+      000000000000858A8870858A88FF000000000000000000000000858A88708E93
+      91FEC1C4C2FF999D9CF700000000000000000000000000000000000000000000
+      0000000000008D9290FBD1D3D2FF000000000000000000000000909593DAD6D8
+      D7FFE2E2E2FF9C9F9FFF989C9B81000000000000000000000000000000000000
+      0000909593A8A8ACABFFE3E3E3FF0000000000000000000000008C918FF5EBEB
+      EBFFE2E2E2FFDCDDDCFF989C9BFC00000000000000000000000000000000858A
+      881F898E8CFFE2E3E3FFE0E0E0FF000000000000000000000000858A88CF9A9E
+      9DFDE8E8E8FFE1E1E1FFB1B3B2FFA2A6A4BE0000000000000000000000009297
+      95CFC3C6C5FFDFDFDFFFE2E2E2FF000000000000000000000000858A881F858A
+      88FEDFE0E0FFE0E0E0FFE0E0E0FF959A98FF0000000000000000858A883C8F94
+      92FFE1E1E1FFDEDEDEFFCBCCCBFF00000000000000000000000000000000858A
+      889C8D9290FEEBEBEBFFDFDFDFFFC8C9C9FFA8ABAAD900000000919694F1D3D5
+      D4FFDDDDDDFFE2E2E2FF898E8CFF000000000000000000000000000000000000
+      0000858A88EFC0C3C2FEE0E0E0FFDDDDDDFF9A9E9DFF9A9E9C90A2A5A4FFDCDC
+      DCFFDCDCDCFFB0B2B1FF909593A8000000000000000000000000000000000000
+      0000858A8857878C8AFFE9EAEAFFDCDCDCFFD6D6D6FFA7ABA9FFC1C3C1FFDBDB
+      DBFFDDDEDEFF929795F900000000000000000000000000000000000000000000
+      000000000000858A88C0ABAEADFDDFDFDFFFDBDBDBFFAFB2B0FFBDBFBEFFDCDC
+      DCFF959997FF858A883C00000000000000000000000000000000000000000000
+      000000000000858A881F878C8AFCDEE0DFFFDADADAFFD8D8D8FFB1B4B3FFBABC
+      BAFF989C9BD50000000000000000000000000000000000000000000000000000
+      00000000000000000000858A88878B8F9BFFE2E2E2FFD8D8D8FFBEC0BFFF9295
+      A9FF000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000606B0816B6F94FFB1B3B6FF00000000B1B3B6FF6B6F
+      94FF0606B0810000000000000000000000000000000000000000000000000000
+      A4200808B3A10909B5F60505AEFE3031DAFF393AC7FF0303AAFF393AC7FF3031
+      DAFF0505AEFE0909B5F60808B3A10000000000000000000000000606B0680909
+      B5E61A1AD4FF1F1FDCFF2121E1FF2121E1FF0303AAFE0303AAFF0303AAFE2121
+      E1FF2121E1FF1F1FDCFF1A1AD4FF00000000000000001B1CAE440505ADDF1E1E
+      DCFF1111C4EC0606B0EE1717CEFF1515CBFF0000A4875558AE990000A4871515
+      CBFF1717CEFF0606B0EE1111C4EC000000000000000000000000000000000000
+      00000000000000000000000000005C5C5CBF5C5C5CFF5C5C5CFF5C5C5CFF5C5C
+      5CFF5C5C5CBF0000000000000000000000000000000000000000008080020040
+      6008004060084F575A395D5E5EEA5C5C5CFF838F8FFF849090FF849090FF838F
+      8FFF5C5C5CFF5D5E5EEA50575A3C000000000000000003456E5D01456DF00143
+      6BFC01436BFC3A5463FE737A7AFF8A9797FF8A9797FF8A9797FF8A9797FF8A97
+      97FF8A9797FF757B7BFF3B5563FE000000000080800201456FEC2483C0FF3A7E
+      A9FF647074FF616262FF888D8DFFB0BABAFFB0BABAFFB1BABAFFB1BBBBFFB2BB
+      BBFFB2BCBCFF8A9090FF626363FF000000000040600801446DFC2688C5FF6471
+      75FFECEDECFFDDDDDDFF6A6B6BFF5E5E5EFF5E5E5EFF5E5E5EFF5E5E5EFF5E5E
+      5EFF5E5E5EFF6A6B6BFFDBDBDBFF000000000040600801446DFC2787C6FF646A
+      69FFFFFFFFFFEFF0F0FFEEEFEFFFEAEBEBFFEAEBEBFFEAEBEBFFEAEBEBFFEAEB
+      EBFFEAEBEBFFEEEFEFFFEFF0F0FF000000000040600801446DFC2787C6FF646A
+      69FFFFFFFFFFEFF0F0FFEFF0F0FFEFF0F0FFEFF0F0FFEFF0F0FFEFF0F0FFEFF0
+      F0FFEFF0F0FFEFF0F0FFEEEFEFFF000000000040600801446DFC2787C6FF646A
+      68FFFFFFFFFFEFF0F0FFA6A7A7FFA6A7A7FFA6A7A7FFA6A7A7FFA6A7A7FFA6A7
+      A7FFA6A7A7FFA6A6A6FFECEDEDFF000000000040600801446DFC2787C6FF646A
+      68FFFFFFFFFFEFF0F0FFEFF0F0FFEFF0F0FFEFF0F0FFEFF0F0FFEFF0F0FFEEEF
+      EFFFEDEEEEFFEBEDEDFFEAEBEBFF000000000040600801446DFC2787C6FF6469
+      68FFFFFFFFFFEFF0F0FFA6A7A7FFA6A7A7FFA6A7A7FFA6A7A7FFA5A6A6FFA4A5
+      A5FFA3A4A4FFA2A4A4FFE7E9E9FF000000000040600801446DFC2787C6FF6469
+      68FFFFFFFFFFEFF0F0FFEFF0F0FFEFF0F0FFEEEFEFFFECEEEEFFEBECECFFE9EB
+      EBFFE8EAEAFFE7E9E9FFD8DBDBFF000000000040600801446DFC2787C5FF6469
+      68FFFFFFFFFFEFF0F0FFA6A6A6FFA5A6A6FFA4A5A5FFA3A4A4FFA1A3A3FFE7E9
+      E9FFE6E8E8FFE4E7E7FFCACECDFF000000000040600801446DFC2687C5FF6469
+      68FFFFFFFFFFEDEEEEFFECEDEDFFEAECECFFE9EBEBFFE8EAEAFFE6E8E8FFE5E7
+      E7FFE3E6E6FFE2E5E5FFB5B8B8FF000000000040600801446DFC2687C5FF6469
+      68FFFFFFFFFFEBECECFFE9EBEBFFE8EAEAFFE7E9E9FFE5E8E8FFE4E6E6FFC9CD
+      CDFFBEC1C1FFB4B7B7FFB2B6B6FF000000000040600801446DFC2687C5FF6469
+      68FFFFFFFFFFE9EAEAFFE7E9E9FFE6E8E8FFE4E7E7FFE3E6E6FFE2E4E4FFACAF
+      AFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000040600801446DFC2687C5FF6469
+      68FFFFFFFFFFE6E8E8FFE5E7E7FFE3E6E6FFE2E5E5FFE1E4E4FFDFE2E2FFAAAE
+      ADFFFFFFFFFFEFF0F0FFE1E2E2FF
+    }
+  end
+  object InputActionList: TActionList
+    Images = EdImgList
+    left = 240
+    top = 520
+    object acNum0: TAction
+      Caption = '0'
+      Hint = '0'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '0'
+      )
+      ShortCut = 96
+    end
+    object acNum1: TAction
+      Tag = 1
+      Caption = '1'
+      Hint = '1'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '1'
+      )
+      ShortCut = 97
+    end
+    object acNum2: TAction
+      Tag = 2
+      Caption = '2'
+      Hint = '2'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '2'
+      )
+      ShortCut = 98
+    end
+    object acNum3: TAction
+      Tag = 3
+      Caption = '3'
+      Hint = '3'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '3'
+      )
+      ShortCut = 99
+    end
+    object acNum4: TAction
+      Tag = 4
+      Caption = '4'
+      Hint = '4'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '4'
+      )
+      ShortCut = 100
+    end
+    object acNum5: TAction
+      Tag = 5
+      Caption = '5'
+      Hint = '5'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '5'
+      )
+      ShortCut = 101
+    end
+    object acNum6: TAction
+      Tag = 6
+      Caption = '6'
+      Hint = '6'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '6'
+      )
+      ShortCut = 102
+    end
+    object acNum7: TAction
+      Tag = 7
+      Caption = '7'
+      Hint = '7'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '7'
+      )
+      ShortCut = 103
+    end
+    object acNum8: TAction
+      Tag = 8
+      Caption = '8'
+      Hint = '8'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '8'
+      )
+      ShortCut = 104
+    end
+    object acNum9: TAction
+      Tag = 9
+      Caption = '9'
+      Hint = '9'
+      OnExecute = acInputExecute
+      SecondaryShortCuts.Strings = (
+        '9'
+      )
+      ShortCut = 105
+    end
+    object acBackSpace: TAction
+      Hint = 'Remove last character'
+      ImageIndex = 0
+      OnExecute = acBackSpaceExecute
+      ShortCut = 8
+    end
+    object acHexA: TAction
+      Tag = 10
+      Caption = 'A'
+      Hint = 'Hexadecimal A'
+      OnExecute = acInputExecute
+      ShortCut = 65
+    end
+    object acHexB: TAction
+      Tag = 11
+      Caption = 'B'
+      Hint = 'Hexadecimal B'
+      OnExecute = acInputExecute
+      ShortCut = 66
+    end
+    object acHexC: TAction
+      Tag = 12
+      Caption = 'C'
+      Hint = 'Hexadecimal C or Roman numeral 100'
+      OnExecute = acInputExecute
+      ShortCut = 67
+    end
+    object acHexD: TAction
+      Tag = 13
+      Caption = 'D'
+      Hint = 'Hexadecimal D or Roman numeral 500'
+      OnExecute = acInputExecute
+      ShortCut = 68
+    end
+    object acHexE: TAction
+      Tag = 14
+      Caption = 'E'
+      Hint = 'Hexadecimal E'
+      OnExecute = acInputExecute
+      ShortCut = 69
+    end
+    object acHexF: TAction
+      Tag = 15
+      Caption = 'F'
+      Hint = 'Hexadecimal F'
+      OnExecute = acInputExecute
+      ShortCut = 70
+    end
+    object acRomI: TAction
+      Tag = 201
+      Caption = 'I'
+      Hint = 'Roman numeral 1'
+      OnExecute = acInputExecute
+      ShortCut = 73
+    end
+    object acRomV: TAction
+      Tag = 202
+      Caption = 'V'
+      Hint = 'Roman numeral5'
+      OnExecute = acInputExecute
+      ShortCut = 86
+    end
+    object acRomX: TAction
+      Tag = 203
+      Caption = 'X'
+      Hint = 'Roman numeral 10'
+      OnExecute = acInputExecute
+      ShortCut = 88
+    end
+    object acRomL: TAction
+      Tag = 204
+      Caption = 'L'
+      Hint = 'Roman numeral 50'
+      OnExecute = acInputExecute
+      ShortCut = 76
+    end
+    object acRomM: TAction
+      Tag = 207
+      Caption = 'M'
+      Hint = 'Roman numeral 1000'
+      OnExecute = acInputExecute
+      ShortCut = 77
+    end
+    object acNegate: TAction
+      Tag = 255
+      Caption = '_'
+      Hint = 'alter sign'
+      OnExecute = acInputExecute
+      ShortCut = 8381
+    end
+  end
+  object OperatorActionlist: TActionList
+    left = 395
+    top = 460
+    object acAdd: TAction
+      Caption = '+'
+      Hint = 'Add'
+      OnExecute = acAddExecute
+      ShortCut = 107
+    end
+    object acSub: TAction
+      Caption = '-'
+      Hint = 'Subtract'
+      OnExecute = acSubExecute
+      ShortCut = 109
+    end
+    object acMul: TAction
+      Caption = '*'
+      Hint = 'Multiply'
+      OnExecute = acMulExecute
+      ShortCut = 106
+    end
+    object acDiv: TAction
+      Caption = '/'
+      Hint = 'Divide'
+      OnExecute = acDivExecute
+      ShortCut = 111
+    end
+    object acEquals: TAction
+      Caption = '='
+      Hint = 'Equals'
+      OnExecute = acEqualsExecute
+      SecondaryShortCuts.Strings = (
+        '='
+      )
+      ShortCut = 13
+    end
+  end
+end

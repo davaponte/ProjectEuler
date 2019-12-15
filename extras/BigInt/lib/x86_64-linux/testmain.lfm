@@ -1,0 +1,335 @@
+object Form1: TForm1
+  Left = 694
+  Height = 583
+  Top = 137
+  Width = 612
+  Caption = 'Form1'
+  ClientHeight = 583
+  ClientWidth = 612
+  OnCreate = FormCreate
+  object Button1: TButton
+    Left = 27
+    Height = 25
+    Top = 353
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Memo1: TMemo
+    Left = 27
+    Height = 242
+    Top = 24
+    Width = 541
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+    WordWrap = False
+  end
+  object Edit1: TEdit
+    Left = 27
+    Height = 28
+    Top = 289
+    Width = 165
+    TabOrder = 2
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 27
+    Height = 28
+    Top = 319
+    Width = 165
+    TabOrder = 3
+    Text = 'Edit2'
+  end
+  object AddBtn: TButton
+    Left = 27
+    Height = 25
+    Top = 385
+    Width = 75
+    Caption = 'Add'
+    OnClick = AddBtnClick
+    TabOrder = 4
+  end
+  object SubBtn: TButton
+    Left = 27
+    Height = 25
+    Top = 417
+    Width = 75
+    Caption = 'Sub'
+    OnClick = SubBtnClick
+    TabOrder = 5
+  end
+  object RunTestBtn: TButton
+    Left = 490
+    Height = 25
+    Top = 288
+    Width = 75
+    Caption = 'RunTest'
+    OnClick = RunTestBtnClick
+    TabOrder = 6
+  end
+  object MulBtn: TButton
+    Left = 117
+    Height = 25
+    Top = 385
+    Width = 75
+    Caption = 'Mul'
+    OnClick = MulBtnClick
+    TabOrder = 7
+  end
+  object DivBtn: TButton
+    Left = 117
+    Height = 25
+    Top = 417
+    Width = 75
+    Caption = 'Div'
+    OnClick = DivBtnClick
+    TabOrder = 8
+  end
+  object MaxBtn: TButton
+    Left = 208
+    Height = 25
+    Top = 385
+    Width = 75
+    Caption = 'Max'
+    OnClick = MaxBtnClick
+    TabOrder = 9
+  end
+  object MinBtn: TButton
+    Left = 208
+    Height = 25
+    Top = 417
+    Width = 75
+    Caption = 'Min'
+    OnClick = MinBtnClick
+    TabOrder = 10
+  end
+  object TestCacheBtn: TButton
+    Left = 490
+    Height = 25
+    Top = 385
+    Width = 75
+    Caption = 'TestCache'
+    OnClick = TestCacheBtnClick
+    TabOrder = 11
+  end
+  object EqBtn: TButton
+    Left = 296
+    Height = 25
+    Top = 385
+    Width = 75
+    Caption = 'Equals'
+    OnClick = EqBtnClick
+    TabOrder = 12
+  end
+  object FacBtn: TButton
+    Left = 296
+    Height = 25
+    Top = 417
+    Width = 75
+    Caption = 'FacN'
+    OnClick = FacBtnClick
+    TabOrder = 13
+  end
+  object DirtyWordsBtn: TButton
+    Left = 490
+    Height = 25
+    Top = 417
+    Width = 75
+    Caption = 'Dirty Words'
+    OnClick = DirtyWordsBtnClick
+    TabOrder = 14
+  end
+  object NegBtn: TButton
+    Left = 27
+    Height = 25
+    Top = 448
+    Width = 75
+    Caption = 'NegBtn'
+    OnClick = NegBtnClick
+    TabOrder = 15
+  end
+  object AbsBtn: TButton
+    Left = 117
+    Height = 25
+    Top = 448
+    Width = 75
+    Caption = 'AbsBtn'
+    OnClick = AbsBtnClick
+    TabOrder = 16
+  end
+  object IsNeg: TButton
+    Left = 208
+    Height = 25
+    Top = 448
+    Width = 75
+    Caption = 'IsNeg'
+    OnClick = IsNegClick
+    TabOrder = 17
+  end
+  object ZeroBtn: TButton
+    Left = 296
+    Height = 25
+    Top = 448
+    Width = 75
+    Caption = 'ZeroBtn'
+    OnClick = ZeroBtnClick
+    TabOrder = 18
+  end
+  object NormBtn: TButton
+    Left = 27
+    Height = 25
+    Top = 480
+    Width = 75
+    Caption = 'NormBtn'
+    OnClick = NormBtnClick
+    TabOrder = 19
+  end
+  object ToHexBtn: TButton
+    Left = 117
+    Height = 25
+    Top = 480
+    Width = 75
+    Caption = 'ToHexBtn'
+    OnClick = ToHexBtnClick
+    TabOrder = 20
+  end
+  object HexToNBtn: TButton
+    Left = 208
+    Height = 25
+    Top = 480
+    Width = 75
+    Caption = 'HexToNBtn'
+    OnClick = HexToNBtnClick
+    TabOrder = 21
+  end
+  object ExpBtn: TButton
+    Left = 296
+    Height = 25
+    Top = 480
+    Width = 75
+    Caption = 'ExpBtn'
+    OnClick = ExpBtnClick
+    TabOrder = 22
+  end
+  object ToBinBtn: TButton
+    Left = 27
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'ToBinBtn'
+    OnClick = ToBinBtnClick
+    TabOrder = 23
+  end
+  object BinToNBtn: TButton
+    Left = 117
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'BinToNBtn'
+    OnClick = BinToNBtnClick
+    TabOrder = 24
+  end
+  object SrtNBtn: TButton
+    Left = 208
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'SrtNBtn'
+    OnClick = SrtNBtnClick
+    TabOrder = 25
+  end
+  object RandBtn: TButton
+    Left = 296
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'RandBtn'
+    OnClick = RandBtnClick
+    TabOrder = 26
+  end
+  object RandRBtn: TButton
+    Left = 27
+    Height = 25
+    Top = 544
+    Width = 75
+    Caption = 'RandRBtn'
+    OnClick = RandRBtnClick
+    TabOrder = 27
+  end
+  object ToRomanBtn: TButton
+    Left = 117
+    Height = 25
+    Top = 544
+    Width = 75
+    Caption = 'ToRomanBtn'
+    OnClick = ToRomanBtnClick
+    TabOrder = 28
+  end
+  object RomToNBtn: TButton
+    Left = 208
+    Height = 25
+    Top = 544
+    Width = 75
+    Caption = 'RomToNBtn'
+    OnClick = RomToNBtnClick
+    TabOrder = 29
+  end
+  object ToOctBtn: TButton
+    Left = 296
+    Height = 25
+    Top = 544
+    Width = 75
+    Caption = 'ToOctBtn'
+    OnClick = ToOctBtnClick
+    TabOrder = 30
+  end
+  object OctToNBtn: TButton
+    Left = 384
+    Height = 25
+    Top = 385
+    Width = 75
+    Caption = 'OctToNBtn'
+    OnClick = OctToNBtnClick
+    TabOrder = 31
+  end
+  object OddBtn: TButton
+    Left = 384
+    Height = 25
+    Top = 417
+    Width = 75
+    Caption = 'OddBtn'
+    OnClick = OddBtnClick
+    TabOrder = 32
+  end
+  object FibBtn: TButton
+    Left = 384
+    Height = 25
+    Top = 448
+    Width = 75
+    Caption = 'FibBtn'
+    OnClick = FibBtnClick
+    TabOrder = 33
+  end
+  object LucasBtn: TButton
+    Left = 384
+    Height = 25
+    Top = 480
+    Width = 75
+    Caption = 'LucasBtn'
+    OnClick = LucasBtnClick
+    TabOrder = 34
+  end
+  object BinomBtn: TButton
+    Left = 384
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'BinomBtn'
+    OnClick = BinomBtnClick
+    TabOrder = 35
+  end
+end

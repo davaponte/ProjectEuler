@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1540814642"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -Cirot -O1 -g -gl -gh -l -vewnhibq -Fi/home/data/Projects/Python/ProjectEuler/extras/BigInt/lib/x86_64-linux -Fu/home/data/Projects/Python/ProjectEuler/extras/MijnLib -Fu/usr/share/lazarus/2.0.4/lcl/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/2.0.4/lcl/units/x86_64-linux -Fu/usr/share/lazarus/2.0.4/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/2.0.4/packager/units/x86_64-linux -Fu/home/data/Projects/Python/ProjectEuler/extras/BigInt/ -FU/home/data/Projects/Python/ProjectEuler/extras/BigInt/lib/x86_64-linux/ -FE/home/data/Projects/Python/ProjectEuler/extras/BigInt/ -o/home/data/Projects/Python/ProjectEuler/extras/BigInt/testcase -dLCL -dLCLgtk2 -FaLazLogger,LCLExceptionStacktrace testcase.lpr"/>
+</CONFIG>
