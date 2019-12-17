@@ -2,58 +2,51 @@
 
 {$mode objfpc}{$H+}
 {$APPTYPE CONSOLE}
-
-
 uses
-  gnurz_asm;
+  SysUtils;
 
 var
-  GnurzObjekt: TGnurz;
-  n, p, _1, _2: GNZTyp;
-  i: integer;
+  j, n: integer;
+  S: string;
+  p: Extended;
 
-function Add(a, b: GNZTyp): GNZTyp;
+function Power(a: Extended; b: integer): Extended;
+var
+  k: integer;
 begin
-  Result := GnurzObjekt.GNZadd(a, b);
+  Result := 1;
+  for k := 1 to b do begin
+    Result := Result * a;
+    if Result > 1e4000 then
+      Result := Result / 1e3980;
+  end;
 end;
 
-function Sub(a, b: GNZTyp): GNZTyp;
+function Mult(a, b: Extended): Extended;
 begin
-  Result := GnurzObjekt.GNZSub(a, b);
-end;
-
-function Mul(a, b: GNZTyp): GNZTyp;
-begin
-  Result := GnurzObjekt.GNZmul(a, b);
-end;
-
-function Pow(a, b: GNZTyp): GNZTyp;
-begin
-  Result := GnurzObjekt.GNZPotenz(a, b);
+  Result := a * b;
+  if Result > 1e4000 then
+    Result := Result / 1e3980;
 end;
 
 begin
-  GnurzObjekt := TGnurz.Create;
-  n := GnurzObjekt.WordToGNZTyp(12710);
-  i := 44;
-  _1 := GnurzObjekt.WordToGNZTyp(1);
-  _2 := GnurzObjekt.WordToGNZTyp(2);
-  p := Pow(_2, Sub(n, _1));
-  WriteLn(GnurzObjekt.GNZTypToStr(p));
-{
+  j := 45; // 821;// 2416; //45;    // El valor conocido
+  Dec(j);     // Uno menos para que encuentre justo ése
+  n := 12710; // 233100;// 686500; //12710; // Este normal porque es el que va a encontrar en la primera iterarción, pero...
+  p := Power(2, n - 1);
   repeat
-    p := Mul(_2, p);
-    if (Copy(GnurzObjekt.GNZTypToStr(p), 1, 3) = '123') then begin
-      Inc(i);
-      WriteLn(i);
-      if (i = 678910) then begin
-        WriteLn('ANSWER: ', GnurzObjekt.GNZTypToStr(n));
+    p := Mult(p, 2);
+    S := FloatToStr(p);
+    Delete(S, Pos('.', S), 1);
+    if (Copy(S, 1, 3) = '123') then begin
+      Inc(j);
+      if (n mod 25000 = 0) then
+         WriteLn('j: ', j, ' | n: ', n);
+      if (j = 678910) then begin
+        WriteLn('ANSWER: ', n);
         Break;
       end;
-
     end;
-    n := Add(n, _1);
+    Inc(n);
   until False;
-}
-  GnurzObjekt.Free;
 end.

@@ -8,30 +8,25 @@ uses
 
 var
   a, b, h: extended;
-  p, i: integer;
+  i: integer;
   ai, bi, hi: int64;
   s: string;
-  r: boolean;
 
-function is_pandigital(s: string): boolean;
+function IsPanDigital(s: string): boolean;
 var
-  i,k: integer;
+  i, k: integer;
 begin
-  is_pandigital := True;
-  if length(s) <> 9 then
-    is_pandigital := False
+  Result := True;
+  if Pos('0', s) > 0 then
+    Result := False
   else
-    if Pos('0', s) > 0 then
-      is_pandigital := False
-    else begin
-      for i := 1 to 9 do  begin
-         k := pos(inttostr(i), s);
-         if k = 0 then
-           is_pandigital := False;
-         delete(s, k, 1);
+    for i := 1 to 9 do  begin
+      k := Pos(Char(i + 48), s);
+      if k = 0 then begin
+        Result := False;
+        Exit;
       end;
-      if s <> '' then
-        is_pandigital := False;
+      s[k] := '0';
     end;
 end;
 
@@ -45,21 +40,20 @@ begin
     Inc(i);
     h := b;
     b := a + b;
-    if b > 1e500 then begin
-      b := b / 1e480;
-      h := h / 1e480;
+    if b > 1e4000 then begin
+      b := b / 1e3980;
+      h := h / 1e3980;
     end;
     a := h;
     hi := bi;
     bi := ai + bi;
     bi := bi mod 1000000000;
     ai := hi;
-    s := floattostr(b);
-    p := pos('.', s);
-    Delete(s, p, 1);
-    s := Copy(s, 0, 9);
-    r := is_pandigital(s) and is_pandigital(inttostr(bi));
-    if r then
-      WriteLn(inttostr(i) + ' * ' + floattostr(b));
-  until r;
+    s := FloatToStr(b);
+    Delete(s, Pos('.', s), 1);
+    if IsPanDigital(Copy(s, 1, 9)) and IsPanDigital(Copy(IntToStr(bi), 1, 9)) then begin
+      WriteLn(IntToStr(i)); //  + ' * ' + FloatToStr(b));
+      Exit;
+    end;
+  until False;
 end.

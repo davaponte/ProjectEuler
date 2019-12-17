@@ -10,13 +10,13 @@ p = 2**(n-1) # Uno menos adrede
 Quit = False
 while not Quit:
     p *= 2
-    if (str(p)[:3] == '123'):
+    s = str(p)
+    if (s[:3] == '123'):
         i += 1
-        print(i)
+        if (n % 100 == 0):
+            print('j: ', i, '| n: ', n, '| len: ', len(s))
         if (i == 678910):
             print('ANSWER: ', n)
             Quit = True
             break
     n += 1
-    # if (n % 10000 == 0):
-    #     print(n)
