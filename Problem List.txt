@@ -1,0 +1,694 @@
+
+Problem 001 005% COMPLETED on Tue, 12 Nov 2019, 09:12 Multiples of 3 and 5 2
+Problem 002 005% COMPLETED on Tue, 12 Nov 2019, 09:49 Even Fibonacci numbers 3
+Problem 003 005% COMPLETED on Tue, 12 Nov 2019, 10:10 Largest prime factor 4
+Problem 004 005% COMPLETED on Tue, 12 Nov 2019, 10:20 Largest palindrome product 5
+Problem 005 005% COMPLETED on Tue, 12 Nov 2019, 10:53 Smallest multiple 6
+Problem 006 005% COMPLETED on Tue, 12 Nov 2019, 11:03 Sum square difference 7
+Problem 007 005% COMPLETED on Tue, 12 Nov 2019, 11:19 10001st prime 8
+Problem 008 005% COMPLETED on Tue, 12 Nov 2019, 11:40 Largest product in a series 9
+Problem 009 005% COMPLETED on Tue, 12 Nov 2019, 11:53 Special Pythagorean triplet 10
+Problem 010 005% COMPLETED on Tue, 12 Nov 2019, 12:49 Summation of primes 11
+Problem 011 005% COMPLETED on Tue, 12 Nov 2019, 17:32 Largest product in a grid 12
+Problem 012 005% COMPLETED on Wed, 13 Nov 2019, 10:49 Highly divisible triangular number 13
+Problem 013 005% COMPLETED on Wed, 13 Nov 2019, 18:31 Large sum 14
+Problem 014 005% COMPLETED on Wed, 13 Nov 2019, 18:46 Longest Collatz sequence 15
+Problem 015 005% COMPLETED on Fri, 15 Nov 2019, 12:09 Lattice paths 16
+Problem 016 005% COMPLETED on Wed, 13 Nov 2019, 22:05 Power digit sum 17
+Problem 017 005% COMPLETED on Sun, 17 Nov 2019, 14:17 Number letter counts 18
+Problem 018 005% COMPLETED on Sat, 23 Nov 2019, 19:50 Maximum path sum I 19
+Problem 019 005% COMPLETED on Fri, 15 Nov 2019, 13:33 Counting Sundays 20
+Problem 020 005% COMPLETED on Fri, 15 Nov 2019, 16:25 Factorial digit sum 21
+Problem 021 005% COMPLETED on Fri, 15 Nov 2019, 17:45 Amicable numbers 22
+Problem 022 005% COMPLETED on Sun, 17 Nov 2019, 14:39 Names scores 23
+Problem 023 005% COMPLETED on Wed, 27 Nov 2019, 09:42 Non-abundant sums 24
+Problem 024 005% COMPLETED on Sun, 17 Nov 2019, 19:43 Lexicographic permutations 25
+Problem 025 005% COMPLETED on Sun, 17 Nov 2019, 19:59 1000-digit Fibonacci number 26
+Problem 026 005% COMPLETED on Mon, 18 Nov 2019, 08:50 Reciprocal cycles 27
+Problem 027 005% COMPLETED on Wed, 27 Nov 2019, 08:59 Quadratic primes 28
+Problem 028 005% COMPLETED on Tue, 19 Nov 2019, 09:30 Number spiral diagonals 29
+Problem 029 005% COMPLETED on Tue, 19 Nov 2019, 10:10 Distinct powers 30
+Problem 030 005% COMPLETED on Tue, 19 Nov 2019, 10:48 Digit fifth powers 31
+Problem 031 005% COMPLETED on Wed, 20 Nov 2019, 10:43 Coin sums 32
+Problem 032 005% COMPLETED on Wed, 20 Nov 2019, 08:54 Pandigital products 33
+Problem 033 005% COMPLETED on Wed, 27 Nov 2019, 08:35 Digit cancelling fractions 34
+Problem 034 005% COMPLETED on Wed, 20 Nov 2019, 11:11 Digit factorials 35
+Problem 035 005% COMPLETED on Wed, 20 Nov 2019, 11:43 Circular primes 36
+Problem 036 005% COMPLETED on Wed, 20 Nov 2019, 11:54 Double-base palindromes 37
+Problem 037 005% COMPLETED on Wed, 20 Nov 2019, 12:25 Truncatable primes 38
+Problem 038 005% COMPLETED on Wed, 20 Nov 2019, 16:08 Pandigital multiples 39
+Problem 039 005% COMPLETED on Wed, 20 Nov 2019, 16:32 Integer right triangles 40
+Problem 040 005% COMPLETED on Wed, 20 Nov 2019, 16:56 Champernowne's constant 41
+Problem 041 005% COMPLETED on Wed, 20 Nov 2019, 18:15 Pandigital prime 42
+Problem 042 005% COMPLETED on Wed, 20 Nov 2019, 18:34 Coded triangle numbers 43
+Problem 043 005% COMPLETED on Wed, 20 Nov 2019, 19:06 Sub-string divisibility 44
+Problem 044 005% COMPLETED on Thu, 21 Nov 2019, 16:36 Pentagon numbers 45
+Problem 045 005% COMPLETED on Thu, 21 Nov 2019, 17:44 Triangular, pentagonal, and hexagonal 46
+Problem 046 005% COMPLETED on Thu, 21 Nov 2019, 18:37 Goldbach's other conjecture 47
+Problem 047 005% COMPLETED on Wed, 27 Nov 2019, 11:06 Distinct primes factors 48
+Problem 048 005% COMPLETED on Thu, 21 Nov 2019, 22:58 Self powers 49
+Problem 049 005% COMPLETED on Sat, 23 Nov 2019, 12:11 Prime permutations 50
+Problem 050 005% COMPLETED on Sat, 23 Nov 2019, 19:28 Consecutive prime sum 51
+Problem 051 015% COMPLETED on Wed, 4 Dec 2019, 12:40 Prime digit replacements 52
+Problem 052 005% COMPLETED on Wed, 27 Nov 2019, 16:21 Permuted multiples 53
+Problem 053 005% COMPLETED on Wed, 27 Nov 2019, 17:17 Combinatoric selections 54
+Problem 054 010% COMPLETED on Sat, 7 Dec 2019, 19:22 Poker hands 55
+Problem 055 005% COMPLETED on Wed, 4 Dec 2019, 19:01 Lychrel numbers 56
+Problem 056 005% COMPLETED on Thu, 28 Nov 2019, 07:36 Powerful digit sum 57
+Problem 057 005% COMPLETED on Wed, 4 Dec 2019, 23:54 Square root convergents 58
+Problem 058 005% COMPLETED on Sat, 7 Dec 2019, 22:53 Spiral primes 59
+Problem 059 005% COMPLETED on Thu, 28 Nov 2019, 10:19 XOR decryption 60
+Problem 060 020% COMPLETED on Tue, 10 Dec 2019, 21:45 Prime pair sets 61
+Problem 061 020% COMPLETED on Thu, 12 Dec 2019, 10:08 Cyclical figurate numbers 62
+Problem 062 015% COMPLETED on Thu, 28 Nov 2019, 18:02 Cubic permutations 63
+Problem 063 005% COMPLETED on Thu, 28 Nov 2019, 18:49 Powerful digit counts  
+Problem 064 020% Odd period square roots  
+Problem 065 015% Convergents of e  
+Problem 066 025% Diophantine equation 67
+Problem 067 005% COMPLETED on Fri, 29 Nov 2019, 10:02 Maximum path sum II 68
+Problem 068 025% COMPLETED on Fri, 29 Nov 2019, 11:45 Magic 5-gon ring  
+Problem 069 010% Totient maximum  
+Problem 070 020% Totient permutation 
+Problem 071 010% Ordered fractions  
+Problem 072 020% Counting fractions  
+Problem 073 015% Counting fractions in a range 74
+Problem 074 015% COMPLETED on Thu, 12 Dec 2019, 14:42 Digit factorial chains  
+Problem 075 025% Singular integer right triangles  
+Problem 076 010% Counting summations  
+Problem 077 025% Prime summations  
+Problem 078 030% Coin partitions 79
+Problem 079 005% COMPLETED on Sun, 8 Dec 2019, 19:28 Passcode derivation 80
+Problem 080 020% COMPLETED on Tue, 3 Dec 2019, 09:04 Square root digital expansion 
+Problem 081 010% Path sum: two ways  
+Problem 082 020% Path sum: three ways  
+Problem 083 025% Path sum: four ways  
+Problem 084 035% Monopoly odds  
+Problem 085 015% Counting rectangles  
+Problem 086 035% Cuboid route 87
+Problem 087 020% COMPLETED on Thu, 12 Dec 2019, 16:20 Prime power triples  
+Problem 088 040% Product-sum numbers  
+Problem 089 020% Roman numerals  
+Problem 090 040% Cube digit pairs 
+Problem 091 025% Right triangles with integer coordinates 92
+Problem 092 005% COMPLETED on Sun, 8 Dec 2019, 12:14 Square digit chains  
+Problem 093 035% Arithmetic expressions 94
+Problem 094 035% COMPLETED on Fri, 13 Dec 2019, 18:18 Almost equilateral triangles  
+Problem 095 030% Amicable chains  
+Problem 096 025% Su Doku 97
+Problem 097 005% COMPLETED on Mon, 2 Dec 2019, 14:16 Large non-Mersenne prime  
+Problem 098 035% Anagramic squares 99
+Problem 099 010% COMPLETED on Mon, 2 Dec 2019, 14:08 Largest exponential  
+Problem 100 030% Arranged probability  
+Problem 101 035% Optimum polynomial  
+Problem 102 015% Triangle containment  
+Problem 103 045% Special subset sums: optimum 104
+Problem 104 025% COMPLETED on Sun, 15 Dec 2019, 11:52 Pandigital Fibonacci ends  
+Problem 105 045% Special subset sums: testing  
+Problem 106 050% Special subset sums: meta-testing  
+Problem 107 035% Minimal network  
+Problem 108 030% Diophantine reciprocals I  
+Problem 109 045% Darts  
+Problem 110 040% Diophantine reciprocals II 
+Problem 111 045% Primes with runs 112
+Problem 112 015% COMPLETED on Mon, 16 Dec 2019, 19:48 Bouncy numbers  
+Problem 113 030% Non-bouncy numbers  
+Problem 114 035% Counting block combinations I  
+Problem 115 035% Counting block combinations II  
+Problem 116 030% Red, green or blue tiles  
+Problem 117 035% Red, green, and blue tiles  
+Problem 118 045% Pandigital prime sets  
+Problem 119 030% Digit power sum  
+Problem 120 025% Square remainders 
+Problem 121 035% Disc game prize fund  
+Problem 122 040% Efficient exponentiation  
+Problem 123 030% Prime square remainders  
+Problem 124 025% Ordered radicals  
+Problem 125 025% Palindromic sums  
+Problem 126 055% Cuboid layers  
+Problem 127 050% abc-hits  
+Problem 128 055% Hexagonal tile differences  
+Problem 129 045% Repunit divisibility  
+Problem 130 045% Composites with prime repunit property 
+Problem 131 040% Prime cube partnership  
+Problem 132 045% Large repunit factors  
+Problem 133 050% Repunit nonfactors  
+Problem 134 045% Prime pair connection  
+Problem 135 045% Same differences  
+Problem 136 050% Singleton difference  
+Problem 137 050% Fibonacci golden nuggets  
+Problem 138 045% Special isosceles triangles  
+Problem 139 050% Pythagorean tiles  
+Problem 140 055% Modified Fibonacci golden nuggets 
+Problem 141 060% Investigating progressive numbers, n, which are also square  
+Problem 142 045% Perfect Square Collection  
+Problem 143 065% Investigating the Torricelli point of a triangle  
+Problem 144 050% Investigating multiple reflections of a laser beam  
+Problem 145 020% How many reversible numbers are there below one-billion?  
+Problem 146 050% Investigating a Prime Pattern   
+Problem 147 065% Rectangles in cross-hatched grids  
+Problem 148 050% Exploring Pascal's triangle  
+Problem 149 050% Searching for a maximum-sum subsequence  
+Problem 150 055% Searching a triangular array for a sub-triangle having minimum-sum 
+Problem 151 050% Paper sheets of standard sizes: an expected-value problem  
+Problem 152 065% Writing 1/2 as a sum of inverse squares  
+Problem 153 065% Investigating Gaussian Integers  
+Problem 154 065% Exploring Pascal's pyramid  
+Problem 155 060% Counting Capacitor Circuits  
+Problem 156 070% Counting Digits  
+Problem 157 065% Solving the diophantine equation 
+Problem 158 055% Exploring strings for which only one character comes lexicographically after its neighbour to the left  
+Problem 159 060% Digital root sums of factorisations  
+Problem 160 060% Factorial trailing digits 
+Problem 161 070% Triominoes  
+Problem 162 045% Hexadecimal numbers  
+Problem 163 070% Cross-hatched triangles  
+Problem 164 045% Numbers for which no three consecutive digits have a sum greater than a given value  
+Problem 165 065% Intersections  
+Problem 166 050% Criss Cross  
+Problem 167 075% Investigating Ulam sequences  
+Problem 168 065% Number Rotations  
+Problem 169 050% Exploring the number of different ways a number can be expressed as a sum of powers of 2  
+Problem 170 070% Find the largest 0 to 9 pandigital that can be formed by concatenating products 
+Problem 171 065% Finding numbers for which the sum of the squares of the digits is a square  
+Problem 172 055% Investigating numbers with few repeated digits  
+Problem 173 030% Using up to one million tiles how many different "hollow" square laminae can be formed?  
+Problem 174 040% Counting the number of "hollow" square laminae that can form one, two, three, ... distinct arrangements  
+Problem 175 070% Fractions involving the number of different ways a number can be expressed as a sum of powers of 2  
+Problem 176 070% Right-angled triangles that share a cathetus  
+Problem 177 080% Integer angled Quadrilaterals  
+Problem 178 055% Step Numbers  
+Problem 179 025% Consecutive positive divisors  
+Problem 180 075% Rational zeros of a function of three variables 
+Problem 181 070% Investigating in how many ways objects of two different colours can be grouped  
+Problem 182 060% RSA encryption  
+Problem 183 045% Maximum product of parts  
+Problem 184 075% Triangles containing the origin  
+Problem 185 055% Number Mind  
+Problem 186 060% Connectedness of a network  
+Problem 187 025% Semiprimes  
+Problem 188 035% The hyperexponentiation of a number  
+Problem 189 070% Tri-colouring a triangular grid  
+Problem 190 050% Maximising a weighted product 
+Problem 191 035% Prize Strings  
+Problem 192 075% Best Approximations  
+Problem 193 055% Squarefree Numbers  
+Problem 194 075% Coloured Configurations  
+Problem 195 075% Inscribed circles of triangles with one angle of 60 degrees  
+Problem 196 065% Prime triplets  
+Problem 197 045% Investigating the behaviour of a recursively defined sequence  
+Problem 198 080% Ambiguous Numbers  
+Problem 199 070% Iterative Circle Packing  
+Problem 200 065% Find the 200th prime-proof sqube containing the contiguous sub-string "200" 
+Problem 201 065% Subsets with a unique sum  
+Problem 202 060% Laserbeam  
+Problem 203 025% Squarefree Binomial Coefficients  
+Problem 204 030% Generalised Hamming Numbers  
+Problem 205 015% Dice Game 206
+Problem 206 005% COMPLETED on Tue, 10 Dec 2019, 22:43 Concealed Square  
+Problem 207 040% Integer partition equations  
+Problem 208 070% Robot Walks  
+Problem 209 060% Circular Logic  
+Problem 210 070% Obtuse Angled Triangles 
+Problem 211 050% Divisor Square Sum  
+Problem 212 070% Combined Volume of Cuboids  
+Problem 213 060% Flea Circus  
+Problem 214 040% Totient Chains  
+Problem 215 050% Crack-free Walls  
+Problem 216 045% Investigating the primality of numbers of the form 
+Problem 217 070% Balanced Numbers  
+Problem 218 055% Perfect right-angled triangles  
+Problem 219 070% Skew-cost coding  
+Problem 220 055% Heighway Dragon 
+Problem 221 065% Alexandrian Integers  
+Problem 222 060% Sphere Packing  
+Problem 223 070% Almost right-angled triangles I  
+Problem 224 075% Almost right-angled triangles II  
+Problem 225 045% Tribonacci non-divisors  
+Problem 226 065% A Scoop of Blancmange  
+Problem 227 065% The Chase  
+Problem 228 070% Minkowski Sums  
+Problem 229 070% Four Representations using Squares  
+Problem 230 050% Fibonacci Words 
+Problem 231 040% The prime factorisation of binomial coefficients  
+Problem 232 065% The Race  
+Problem 233 070% Lattice points on a circle  
+Problem 234 050% Semidivisible numbers  
+Problem 235 040% An Arithmetic Geometric sequence  
+Problem 236 080% Luxury Hampers  
+Problem 237 070% Tours on a 4 x n playing board  
+Problem 238 075% Infinite string tour  
+Problem 239 065% Twenty-two Foolish Primes  
+Problem 240 060% Top Dice 
+Problem 241 080% Perfection Quotients  
+Problem 242 075% Odd Triplets  
+Problem 243 035% Resilience  
+Problem 244 070% Sliders  
+Problem 245 080% Coresilience  
+Problem 246 080% Tangents to an ellipse  
+Problem 247 065% Squares under a hyperbola  
+Problem 248 070% Numbers for which Euler’s totient function equals 13!  
+Problem 249 060% Prime Subset Sums  
+Problem 250 055% 250250 
+Problem 251 070% Cardano Triplets  
+Problem 252 080% Convex Holes  
+Problem 253 075% Tidying up  
+Problem 254 075% Sums of Digit Factorials  
+Problem 255 075% Rounded Square Roots  
+Problem 256 080% Tatami-Free Rooms  
+Problem 257 085% Angular Bisectors  
+Problem 258 070% A lagged Fibonacci sequence  
+Problem 259 070% Reachable Numbers  
+Problem 260 070% Stone Game 
+Problem 261 085% Pivotal Square Sums  
+Problem 262 080% Mountain Range  
+Problem 263 075% An engineers' dream come true  
+Problem 264 085% Triangle Centres  
+Problem 265 040% Binary Circles  
+Problem 266 065% Pseudo Square Root  
+Problem 267 050% Billionaire  
+Problem 268 070% Counting numbers with at least four distinct prime factors less than 100  
+Problem 269 080% Polynomials with at least one integer root  
+Problem 270 080% Cutting Squares 
+Problem 271 060% Modular Cubes, part 1  
+Problem 272 080% Modular Cubes, part 2  
+Problem 273 070% Sum of Squares  
+Problem 274 065% Divisibility Multipliers  
+Problem 275 085% Balanced Sculptures  
+Problem 276 075% Primitive Triangles  
+Problem 277 035% A Modified Collatz sequence  
+Problem 278 050% Linear Combinations of Semiprimes  
+Problem 279 060% Triangles with integral sides and an integral angle   
+Problem 280 065% Ant and seeds 
+Problem 281 055% Pizza Toppings  
+Problem 282 070% The Ackermann function  
+Problem 283 075% Integer sided triangles for which the  area/perimeter ratio is integral  
+Problem 284 055% Steady Squares  
+Problem 285 055% Pythagorean odds  
+Problem 286 050% Scoring probabilities  
+Problem 287 040% Quadtree encoding (a simple compression algorithm)  
+Problem 288 035% An enormous factorial  
+Problem 289 090% Eulerian Cycles  
+Problem 290 050% Digital Signature 
+Problem 291 045% Panaitopol Primes  
+Problem 292 065% Pythagorean Polygons  
+Problem 293 030% Pseudo-Fortunate Numbers  
+Problem 294 045% Sum of digits - experience #23  
+Problem 295 075% Lenticular holes  
+Problem 296 060% Angular Bisector and Tangent  
+Problem 297 035% Zeckendorf Representation  
+Problem 298 060% Selective Amnesia  
+Problem 299 060% Three similar triangles  
+Problem 300 050% Protein folding  
+Problem 301 015% Nim  
+Problem 302 060% Strong Achilles Numbers  
+Problem 303 035% Multiples with small digits  
+Problem 304 040% Primonacci  
+Problem 305 060% Reflexive Position  
+Problem 306 055% Paper-strip Game  
+Problem 307 040% Chip Defects  
+Problem 308 060% An amazing Prime-generating Automaton  
+Problem 309 050% Integer Ladders  
+Problem 310 040% Nim Square 
+Problem 311 070% Biclinic Integral Quadrilaterals  
+Problem 312 050% Cyclic paths on Sierpiński graphs  
+Problem 313 030% Sliding game  
+Problem 314 080% The Mouse on the Moon  
+Problem 315 020% Digital root clocks  
+Problem 316 055% Numbers in decimal expansions  
+Problem 317 035% Firecracker  
+Problem 318 050% 2011 nines  
+Problem 319 090% Bounded Sequences  
+Problem 320 050% Factorials divisible by a huge integer 
+Problem 321 030% Swapping Counters  
+Problem 322 070% Binomial coefficients divisible by 10  
+Problem 323 020% Bitwise-OR operations on random integers  
+Problem 324 050% Building a tower  
+Problem 325 080% Stone Game II  
+Problem 326 055% Modulo Summations  
+Problem 327 040% Rooms of Doom  
+Problem 328 095% Lowest-cost Search  
+Problem 329 025% Prime Frog  
+Problem 330 070% Euler's Number 
+Problem 331 100% Cross flips  
+Problem 332 050% Spherical triangles  
+Problem 333 035% Special partitions  
+Problem 334 065% Spilling the beans  
+Problem 335 065% Gathering the beans  
+Problem 336 025% Maximix Arrangements  
+Problem 337 070% Totient Stairstep Sequences  
+Problem 338 095% Cutting Rectangular Grid Paper  
+Problem 339 070% Peredur fab Efrawg  
+Problem 340 030% Crazy Function 
+Problem 341 045% Golomb's self-describing sequence  
+Problem 342 050% The totient of a square is a cube  
+Problem 343 035% Fractional Sequences  
+Problem 344 100% Silver dollar game  
+Problem 345 015% Matrix Sum  
+Problem 346 015% Strong Repunits  
+Problem 347 015% Largest integer divisible by two primes  
+Problem 348 025% Sum of a square and a cube  
+Problem 349 035% Langton's ant  
+Problem 350 060% Constraining the least greatest and the greatest least 
+Problem 351 025% Hexagonal orchards  
+Problem 352 055% Blood tests  
+Problem 353 050% Risky moon  
+Problem 354 065% Distances in a bee's honeycomb   
+Problem 355 070% Maximal coprime subset  
+Problem 356 060% Largest roots of cubic polynomials  
+Problem 357 010% Prime generating integers  
+Problem 358 025% Cyclic numbers  
+Problem 359 025% Hilbert's New Hotel  
+Problem 360 050% Scary Sphere 
+Problem 361 090% Subsequence of Thue-Morse sequence  
+Problem 362 070% Squarefree factors  
+Problem 363 035% Bézier Curves  
+Problem 364 050% Comfortable distance  
+Problem 365 040% A huge binomial coefficient  
+Problem 366 040% Stone Game III  
+Problem 367 055% Bozo sort  
+Problem 368 045% A Kempner-like series  
+Problem 369 060% Badugi  
+Problem 370 065% Geometric triangles 
+Problem 371 030% Licence plates  
+Problem 372 060% Pencils of rays  
+Problem 373 075% Circumscribed Circles  
+Problem 374 040% Maximum Integer Partition Product  
+Problem 375 040% Minimum of subsequences  
+Problem 376 070% Nontransitive sets of dice  
+Problem 377 045% Sum of digits, experience 13  
+Problem 378 035% Triangle Triples  
+Problem 379 070% Least common multiple count  
+Problem 380 060% Amazing Mazes! 
+Problem 381 015% (prime-k) factorial  
+Problem 382 060% Generating polygons  
+Problem 383 050% Divisibility comparison between factorials  
+Problem 384 065% Rudin-Shapiro sequence  
+Problem 385 070% Ellipses inside triangles  
+Problem 386 040% Maximum length of an antichain  
+Problem 387 010% Harshad Numbers  
+Problem 388 055% Distinct Lines  
+Problem 389 030% Platonic Dice  
+Problem 390 060% Triangles with non rational sides and integral area 
+Problem 391 075% Hopping Game  
+Problem 392 035% Enmeshed unit circle  
+Problem 393 050% Migrating ants  
+Problem 394 055% Eating pie  
+Problem 395 040% Pythagorean tree  
+Problem 396 040% Weak Goodstein sequence  
+Problem 397 070% Triangle on parabola  
+Problem 398 055% Cutting rope  
+Problem 399 045% Squarefree Fibonacci Numbers  
+Problem 400 055% Fibonacci tree game  
+Problem 401 025% Sum of squares of divisors  
+Problem 402 055% Integer-valued polynomials  
+Problem 403 055% Lattice points enclosed by parabola and line  
+Problem 404 060% Crisscross Ellipses  
+Problem 405 040% A rectangular tiling  
+Problem 406 050% Guessing Game  
+Problem 407 020% Idempotents  
+Problem 408 050% Admissible paths through a grid  
+Problem 409 055% Nim Extreme  
+Problem 410 070% Circle and tangent line 
+Problem 411 045% Uphill paths  
+Problem 412 050% Gnomon numbering  
+Problem 413 075% One-child Numbers  
+Problem 414 060% Kaprekar constant  
+Problem 415 100% Titanic sets  
+Problem 416 080% A frog's trip  
+Problem 417 035% Reciprocal cycles II  
+Problem 418 040% Factorisation triples  
+Problem 419 050% Look and say sequence  
+Problem 420 060% 2x2 positive integer matrix 
+Problem 421 050% Prime factors of 
+Problem 422 075% Sequence of points on a hyperbola  
+Problem 423 045% Consecutive die throws  
+Problem 424 060% Kakuro  
+Problem 425 025% Prime connection  
+Problem 426 075% Box-ball system  
+Problem 427 095% n-sequences  
+Problem 428 090% Necklace of circles  
+Problem 429 020% Sum of squares of unitary divisors  
+Problem 430 035% Range flips 
+Problem 431 040% Square Space Silo  
+Problem 432 070% Totient sum  
+Problem 433 065% Steps in Euclid's algorithm  
+Problem 434 075% Rigid graphs  
+Problem 435 030% Polynomials of Fibonacci numbers  
+Problem 436 055% Unfair wager  
+Problem 437 035% Fibonacci primitive roots  
+Problem 438 095% Integer part of polynomial equation's solutions  
+Problem 439 100% Sum of sum of divisors  
+Problem 440 060% GCD and Tiling 
+Problem 441 065% The inverse summation of coprime couples  
+Problem 442 060% Eleven-free integers  
+Problem 443 030% GCD sequence  
+Problem 444 060% The Roundtable Lottery  
+Problem 445 050% Retractions A  
+Problem 446 060% Retractions B  
+Problem 447 095% Retractions C  
+Problem 448 080% Average least common multiple  
+Problem 449 035% Chocolate covered candy  
+Problem 450 100% Hypocycloid and Lattice points 
+Problem 451 030% Modular inverses  
+Problem 452 045% Long Products  
+Problem 453 095% Lattice Quadrilaterals  
+Problem 454 050% Diophantine reciprocals III  
+Problem 455 040% Powers With Trailing Digits  
+Problem 456 050% Triangles containing the origin II  
+Problem 457 035% A polynomial modulo the square of a prime  
+Problem 458 030% Permutations of Project  
+Problem 459 100% Flipping game  
+Problem 460 060% An ant on the move 
+Problem 461 030% Almost Pi  
+Problem 462 060% Permutation of 3-smooth numbers  
+Problem 463 035% A weird recurrence relation  
+Problem 464 060% Möbius function and intervals  
+Problem 465 085% Polar polygons  
+Problem 466 065% Distinct terms in a multiplication table  
+Problem 467 050% Superinteger  
+Problem 468 070% Smooth divisors of binomial coefficients  
+Problem 469 040% Empty chairs  
+Problem 470 065% Super Ramvok 
+Problem 471 075% Triangle inscribed in ellipse  
+Problem 472 060% Comfortable Distance II  
+Problem 473 035% Phigital number base  
+Problem 474 050% Last digits of divisors  
+Problem 475 050% Music festival  
+Problem 476 045% Circle Packing II  
+Problem 477 065% Number Sequence Game  
+Problem 478 100% Mixtures  
+Problem 479 025% Roots on the Rise  
+Problem 480 045% The Last Question 
+Problem 481 070% Chef Showdown  
+Problem 482 085% The incenter of a triangle  
+Problem 483 100% Repeated permutation  
+Problem 484 100% Arithmetic Derivative  
+Problem 485 030% Maximum number of divisors  
+Problem 486 070% Palindrome-containing strings  
+Problem 487 040% Sums of power sums  
+Problem 488 080% Unbalanced Nim  
+Problem 489 100% Common factors between two sequences  
+Problem 490 095% Jumping frog 
+Problem 491 020% Double pandigital number divisible by 11  
+Problem 492 060% Exploding sequence  
+Problem 493 010% Under The Rainbow  
+Problem 494 100% Collatz prefix families  
+Problem 495 100% Writing n as the product of k distinct positive integers  
+Problem 496 050% Incenter and circumcenter of triangle  
+Problem 497 040% Drunken Tower of Hanoi  
+Problem 498 040% Remainder of polynomial division  
+Problem 499 100% St. Petersburg Lottery  
+Problem 500 015% Problem 500!!!  
+Problem 501 040% Eight Divisors  
+Problem 502 100% Counting Castles  
+Problem 503 060% Compromise or persist  
+Problem 504 015% Square on the Inside  
+Problem 505 090% Bidirectional Recurrence  
+Problem 506 030% Clock sequence  
+Problem 507 090% Shortest Lattice Vector  
+Problem 508 090% Integers in base i-1  
+Problem 509 045% Divisor Nim  
+Problem 510 030% Tangent Circles 
+Problem 511 055% Sequences with nice divisibility properties  
+Problem 512 025% Sums of totients of powers  
+Problem 513 060% Integral median  
+Problem 514 090% Geoboard Shapes  
+Problem 515 040% Dissonant Numbers  
+Problem 516 020% 5-smooth totients  
+Problem 517 045% A real recursion  
+Problem 518 020% Prime triples and geometric sequences  
+Problem 519 050% Tricoloured Coin Fountains  
+Problem 520 045% Simbers 
+Problem 521 045% Smallest prime factor  
+Problem 522 085% Hilbert's Blackout  
+Problem 523 030% First Sort I  
+Problem 524 075% First Sort II  
+Problem 525 045% Rolling Ellipse  
+Problem 526 060% Largest prime factors of consecutive numbers  
+Problem 527 030% Randomized Binary Search  
+Problem 528 060% Constrained Sums  
+Problem 529 085% 10-substrings  
+Problem 530 060% GCD of Divisors 
+Problem 531 025% Chinese leftovers  
+Problem 532 055% Nanobots on Geodesics  
+Problem 533 050% Minimum values of the Carmichael function  
+Problem 534 055% Weak Queens  
+Problem 535 060% Fractal Sequence  
+Problem 536 060% Modulo power identity   
+Problem 537 035% Counting tuples  
+Problem 538 040% Maximum quadrilaterals  
+Problem 539 030% Odd elimination  
+Problem 540 030% Counting primitive Pythagorean triples 
+Problem 541 090% Divisibility of Harmonic Number Denominators  
+Problem 542 065% Geometric Progression with Maximum Sum  
+Problem 543 030% Prime-Sum Numbers  
+Problem 544 085% Chromatic Conundrum  
+Problem 545 035% Faulhaber's Formulas  
+Problem 546 085% The Floor's Revenge  
+Problem 547 070% Distance of random points within hollow square laminae  
+Problem 548 035% Gozinta Chains  
+Problem 549 015% Divisibility of factorials  
+Problem 550 055% Divisor game 
+Problem 551 050% Sum of digits sequence  
+Problem 552 040% Chinese leftovers II  
+Problem 553 080% Power sets of power sets  
+Problem 554 080% Centaurs on a chess board  
+Problem 555 030% McCarthy 91 function  
+Problem 556 085% Squarefree Gaussian Integers  
+Problem 557 055% Cutting triangles  
+Problem 558 065% Irrational base  
+Problem 559 100% Permuted Matrices  
+Problem 560 075% Coprime Nim 
+Problem 561 030% Divisor Pairs  
+Problem 562 075% Maximal perimeter  
+Problem 563 045% Robot Welders  
+Problem 564 060% Maximal polygons  
+Problem 565 035% Divisibility of sum of divisors  
+Problem 566 100% Cake Icing Puzzle  
+Problem 567 050% Reciprocal games I  
+Problem 568 055% Reciprocal games II  
+Problem 569 045% Prime Mountain Range  
+Problem 570 055% Snowflakes 
+Problem 571 025% Super Pandigital Numbers  
+Problem 572 050% Idempotent matrices  
+Problem 573 080% Unfair race  
+Problem 574 050% Verifying Primes  
+Problem 575 035% Wandering Robots  
+Problem 576 055% Irrational jumps  
+Problem 577 020% Counting hexagons  
+Problem 578 080% Integers with decreasing prime powers  
+Problem 579 100% Lattice points in lattice cubes  
+Problem 580 070% Squarefree Hilbert numbers 
+Problem 581 030% 47-smooth triangular numbers  
+Problem 582 050% Nearly isosceles 120 degree triangles  
+Problem 583 045% Heron Envelopes  
+Problem 584 100% Birthday Problem Revisited  
+Problem 585 100% Nested square roots  
+Problem 586 075% Binary Quadratic Form  
+Problem 587 020% Concave triangle  
+Problem 588 040% Quintinomial coefficients  
+Problem 589 095% Poohsticks Marathon  
+Problem 590 060% Sets with a given Least Common Multiple 
+Problem 591 095% Best Approximations by Quadratic Integers  
+Problem 592 060% Factorial trailing digits 2  
+Problem 593 035% Fleeting Medians  
+Problem 594 085% Rhombus Tilings  
+Problem 595 035% Incremental Random Sort  
+Problem 596 050% Number of lattice points in a hyperball  
+Problem 597 100% Torpids  
+Problem 598 040% Split Divisibilities  
+Problem 599 060% Distinct Colourings of a Rubik's Cube  
+Problem 600 035% Integer sided equiangular hexagons 
+Problem 601 020% Divisibility streaks  
+Problem 602 035% Product of Head Counts  
+Problem 603 045% Substring sums of prime concatenations  
+Problem 604 040% Convex path in square  
+Problem 605 025% Pairwise Coin-Tossing Game  
+Problem 606 050% Gozinta Chains II  
+Problem 607 020% Marsh Crossing  
+Problem 608 080% Divisor Sums  
+Problem 609 020% π sequences  
+Problem 610 035% Roman Numerals II 
+Problem 611 055% Hallway of square steps  
+Problem 612 030% Friend numbers  
+Problem 613 020% Pythagorean Ant  
+Problem 614 055% Special partitions 2  
+Problem 615 035% The millionth number with at least one million prime factors  
+Problem 616 040% Creative numbers  
+Problem 617 040% Mirror Power Sequence  
+Problem 618 020% Numbers with a given prime factor sum  
+Problem 619 045% Square subsets  
+Problem 620 080% Planetary Gears 
+Problem 621 035% Expressing an integer as the sum of triangular numbers  
+Problem 622 015% Riffle Shuffles  
+Problem 623 045% Lambda Count  
+Problem 624 030% Two heads are better than one  
+Problem 625 035% Gcd sum  
+Problem 626 070% Counting Binary Matrices  
+Problem 627 060% Counting products  
+Problem 628 025% Open chess positions  
+Problem 629 055% Scatterstone Nim  
+Problem 630 020% Crossed lines 
+Problem 631 065% Constrained Permutations  
+Problem 632 035% Square prime factors  
+Problem 633 050% Square prime factors II  
+Problem 634 040% Numbers of the form $a^2b^3$  
+Problem 635 040% Subset sums  
+Problem 636 090% Restricted Factorisations  
+Problem 637 045% Flexible digit sum  
+Problem 638 035% Weighted lattice paths  
+Problem 639 070% Summing a multiplicative function  
+Problem 640 050% Shut the Box 
+Problem 641 035% A Long Row of Dice  
+Problem 642 045% Sum of largest prime factors  
+Problem 643 025% 2-Friendly  
+Problem 644 090% Squares on the line  
+Problem 645 075% Every Day is a Holiday  
+Problem 646 040% Bounded Divisors  
+Problem 647 030% Linear Transformations of Polygonal Numbers  
+Problem 648 045% Skipping Squares  
+Problem 649 030% Low-Prime Chessboard Nim  
+Problem 650 010% Divisors of Binomial Product 
+Problem 651 070% Patterned Cylinders  
+Problem 652 070% Distinct values of a proto-logarithmic function  
+Problem 653 045% Frictionless Tube  
+Problem 654 045% Neighbourly Constraints  
+Problem 655 030% Divisible Palindromes  
+Problem 656 045% Palindromic sequences  
+Problem 657 030% Incomplete words  
+Problem 658 055% Incomplete words II  
+Problem 659 020% Largest prime  
+Problem 660 040% Pandigital Triangles 
+Problem 661 055% A Long Chess Match  
+Problem 662 025% Fibonacci paths  
+Problem 663 035% Sums of subarrays  
+Problem 664 065% An infinite game  
+Problem 665 050% Proportionate Nim  
+Problem 666 045% Polymorphic Bacteria  
+Problem 667 075% Moving Pentagon  
+Problem 668 020% Square root smooth Numbers  
+Problem 669 045% The King's Banquet  
+Problem 670 040% Colouring a Strip 
+Problem 671 080% Colouring a Loop  
+Problem 672 050% One more one  
+Problem 673 035% Beds and Desks  
+Problem 674 075% Solving $\mathcal{I}$-equations  
+Problem 675 025% $2^{\omega(n)}$  
+Problem 676 050% Matching Digit Sums  
+Problem 677 090% Coloured Graphs  
+Problem 678 055% Fermat-like Equations  
+Problem 679 020% Freefarea  
+Problem 680 065% Yarra Gnisrever 
+Problem 681 050% Maximal Area  
+Problem 682 050% 5-Smooth Pairs  
+Problem 683 040% The Chase II  
+Problem 684      Inverse Digit Sum  
+Problem 685      Inverse Digit Sum II 686
+Problem 686      COMPLETED on Mon, 16 Dec 2019, 18:58 Powers of Two  
+Problem 687      Shuffling Cards  
+Problem 688      Piles of Plates  
+Problem 689      Binary Series  
+Problem 690      Tom and Jerry 
+Problem 691      Long substring with many repetitions  
+Problem 692      Siegbert and Jo  
+Problem 693      Finite Sequence Generator 
